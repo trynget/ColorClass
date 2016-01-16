@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic','starter.controllers','starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,13 +23,21 @@ angular.module('starter', ['ionic'])
   });
 })
 
-  //.config(function($stateProvider, $urlRouterProvider){
-  //  $stateProvider
-  //    .state('tab', {
-  //      url: '/tab',
-  //      abstract: true,
-  //      templateUrl: 'templates/tabs.html'
-  //    });
-  //
-  //  $urlRouterProvider.otherwise('/tab/dash');
-  //});
+  .config(function($stateProvider, $urlRouterProvider){
+    //一个页面为一个状态，在下面配置其路径，控制器等，添加了首页和第一个跳转页的示例
+    $stateProvider
+      .state('start', {
+        url: '/start',
+        templateUrl: 'templates/start.html',
+        controller: "startCtrl"
+      })
+      .state('first',{
+        url: '/first',
+        templateUrl: 'templates/first.html',
+        controller: "firstCtrl"
+      });
+
+
+    //当没有状态匹配到时默认显示的状态
+    $urlRouterProvider.otherwise('/start');
+  });
