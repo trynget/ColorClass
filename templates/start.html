@@ -1,0 +1,18 @@
+<!--可以将<ion-view>标签视为<html>标签，在其中写页面-->
+<ion-view>
+  <ion-content>
+      <div class="container">
+          <!--bjup背景图片上半圆-->
+          <img class="bjup" src="img/bjup.png" alt=""/>
+          <!--中间图片-->
+          <img id="hellocenter" src="img/hellocenter.gif" alt=""/>
+          <!--点击开始文字-->
+          <div id="begin" ng-click="goFirst()"><a>点击开始</a></div>
+          <!--bjdown背景图片下半边-->
+          <img class="bjdown" src="img/bjdown.png" alt=""/>
+      </div>
+    <!--用ng-click绑定点击事件，goFirst方法在控制器中定义-->
+    <!--<button ng-click="goFirst()">跳转第一页</button>-->
+      <!--<button ng-click="goBackStart()">回首页</button>-->
+  </ion-content>
+</ion-view>
