@@ -1,24 +1,23 @@
 <!--可以将<ion-view>标签视为<html>标签，在其中写页面-->
 <ion-view>
-    <ion-content>
-        <div class="container">
-            <!--bjup背景图片上半圆-->
-            <img class="bjup" src="img/bjup.png" alt=""/>
-            <!--bjdown背景图片下半边-->
-            <img class="bjdown" src="img/bjdown.png" alt=""/>
-            <!--色彩课堂菜单图片-->
-            <img class="upmenu" src="img/freedraw/ziyouhua.png" alt=""/>
+    <!--bjup背景图片上半圆-->
+    <img class="bjup" src="img/bjup.png" alt=""/>
+    <!--bjdown背景图片下半边-->
+    <img class="bjdown" src="img/bjdown.png" alt=""/>
+    <ion-content scroll="false">
+        <!--色彩课堂菜单图片-->
+        <img class="upmenu" src="img/freedraw/ziyouhua.png" alt=""/>
+        <div class="container" >
             <!--四章按钮-->
-            <img id="twosecaimainone" src="img/freedraw/one.png" alt=""/>
-            <img class="twosecaimainanniu_2" src="img/freedraw/two.png" alt=""/>
-            <img class="twosecaimainanniu_2" src="img/freedraw/three.png" alt=""/>
-            <img class="twosecaimainanniu_2" src="img/freedraw/four.png" alt=""/>
-            <!--返回按钮-->
-            <img class="goback" src="img/goback.gif" alt="" ng-click="backFirst()"/>
+            <div id="twosecaimainanniu_2hezi">
+                <img id="twosecaimainone" src="img/freedraw/one.png" alt=""/>
+                <img class="twosecaimainanniu_2" src="img/freedraw/two.png" alt=""/>
+                <img class="twosecaimainanniu_2" src="img/freedraw/three.png" alt=""/>
+                <img class="twosecaimainanniu_2" src="img/freedraw/four.png" alt=""/>
+            </div>
         </div>
-        <!--用ng-click绑定点击事件，goFirst方法在控制器中定义-->
-        <!--<button ng-click="goFirst()">跳转第一页</button>-->
-        <!--<button ng-click="goBackStart()">回首页</button>-->
     </ion-content>
+    <!--返回按钮-->
+    <img class="goback" src="img/goback.gif" alt="" ng-click="backFirst()"/>
 </ion-view>
 

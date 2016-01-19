@@ -1,25 +1,22 @@
 <!--可以将<ion-view>标签视为<html>标签，在其中写页面-->
 <ion-view>
-    <ion-content>
-        <div class="container">
-            <!--bjup背景图片上半圆-->
-            <img class="bjup" src="img/bjup.png" alt=""/>
-            <!--bjdown背景图片下半边-->
-            <img class="bjdown" src="img/bjdown.png" alt=""/>
+    <!--bjup背景图片上半圆-->
+    <img class="bjup" src="img/bjup.png" alt=""/>
+    <ion-content scroll="false">
             <!--色彩课堂菜单图片-->
             <img class="upmenu" src="img/colorclass/secaiketang.png" alt=""/>
             <!--五章按钮-->
+        <div id="twosecaimainanniuhezi">
             <img id="twosecaimainone" src="img/colorclass/one.png" alt=""/>
             <img class="twosecaimainanniu" src="img/colorclass/two.png" alt=""/>
             <img class="twosecaimainanniu" src="img/colorclass/three.png" alt=""/>
             <img class="twosecaimainanniu" src="img/colorclass/four.png" alt=""/>
             <img class="twosecaimainanniu" src="img/colorclass/five.png" alt=""/>
-            <!--返回按钮-->
-            <img class="goback" src="img/goback.gif" alt="" ng-click="backFirst()"/>
         </div>
-        <!--用ng-click绑定点击事件，goFirst方法在控制器中定义-->
-        <!--<button ng-click="goFirst()">跳转第一页</button>-->
-        <!--<button ng-click="goBackStart()">回首页</button>-->
     </ion-content>
+    <!--返回按钮-->
+    <img class="goback" src="img/goback.gif" alt="" ng-click="backFirst()"/>
+    <!--bjdown背景图片下半边-->
+    <img class="bjdown" src="img/bjdown.png" alt=""/>
 </ion-view>
 
