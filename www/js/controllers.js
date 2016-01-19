@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
     }
   })
   .controller('firstCtrl',function($scope ,$state) {
-<<<<<<< HEAD
+
         $scope.goSecond_1 = function() {
           $state.go('second_1');
         };
@@ -46,9 +46,4 @@ angular.module('starter.controllers', [])
         $state.go('first');
     }
 });
-=======
-    $scope.goBackStart = function() {
-      $state.go('start');
-    }
-  });
->>>>>>> origin/master
+

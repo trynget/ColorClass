@@ -35,7 +35,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         url: '/first',
         templateUrl: 'templates/first.html',
         controller: "firstCtrl"
-<<<<<<< HEAD
+
       })
       .state('second_1',{
            url: '/second_1',
@@ -57,10 +57,6 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/second_4.html',
             controller: "Second_4Ctrl"
         });
-=======
-      });
->>>>>>> origin/master
-
 
     //当没有状态匹配到时默认显示的状态
     $urlRouterProvider.otherwise('/start');
