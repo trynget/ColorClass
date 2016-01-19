@@ -11,7 +11,7 @@ li{list-style-type: none;}
 /*bjdown类用于表示背景图片下半边*/
 .bjdown{width:100%;height: auto;position:absolute;left:0;bottom:0;z-index: -1}
 /*二级页中上边的圆logo*/
-.upmenu{width: 29%;height: 13.5%;margin-top: 12.81%;margin-left: 38.4%;}
+.upmenu{width: 29%;height: 13.5%;position:absolute;top: 4.88%;left: 37.6%;}
 /*二级页面返回按钮*/
 .goback{width:13.98%;height: auto;position: absolute;bottom: 14.52%;left: 43.5%;}
 
@@ -29,11 +29,11 @@ li{list-style-type: none;}
 
 /*====一级页 全解锁状态=======begin*/
 /*减2像素阴影*/
-#secai{position: absolute;width: 35.2%;height: 20.6%;left:13%;top:26%;}
-.ziyou{position: absolute;width: 35.2%;height: 20.6%;right: 13%;top:26%;}
-.hualang{position: absolute;width: 35.2%;height: 20.6%;bottom: 30.35%;left:13%;}
-#shezhi{position: absolute;width: 35.2%;height: 20.6%;bottom: 30.35%;right:13%;}
-#middle{width:11.57%;height: auto; position: absolute;top: 44.5%;right: 45.07%;}
+#secai{position: absolute;width: 35.18%;height: 20.6%;left:13%;top:26.01%;}
+.ziyou{position: absolute;width: 35.18%;height: 20.6%;right:13%;top:26.01%;}
+.hualang{position: absolute;width: 35.18%;height: 20.6%;top:49.32%;left:13%;}
+#shezhi{position: absolute;width: 35.18%;height: 20.6%;top:49.32%;right:13%;}
+#middle{width:11.57%;height: auto; position: absolute;top: 44.5%;right: 44.5%;}
 /*====一级页 全解锁状态=======end*/
 
 /*==========一级页 未解锁状态==========begin======*/
