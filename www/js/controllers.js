@@ -1,7 +1,9 @@
 angular.module('starter.controllers', [])
 //在这下面添加页面对应的控制器，每个控制器管理对应页面的功能，跳转等等
   .controller('startCtrl', function($scope, $state, showMsgService) {
-    showMsgService.showMsg("首页控制器是startCtrl");
+    //rank为全局变量，在任意js中直接调用，例如此处直接输出rank的值
+    showMsgService.showMsg(rank);
+
     $scope.goFirst = function() {
       $state.go('first');
     }
