@@ -51,11 +51,56 @@ li{list-style-type: none;}
 #twosecaimainanniu_2hezi{width: 100%;height: auto;position: absolute;top: 29.81%;left: 0;}
 /*=============二级页--色彩课堂&自由画======end==========*/
 
+/*=============二级页 未解锁状态--色彩课堂&自由画===============begin==========*/
+#secai_two_1{}
+#secai_two_2{display: none}
+#secai_three_1{}
+#secai_three_2{display: none}
+#secai_four_1{}
+#secai_four_2{display: none}
+#secai_five_1{}
+#secai_five_2{display: none}
+#free_two_1{}
+#free_two_2{display: none}
+#free_three_1{}
+#free_three_2{display: none}
+#free_four_1{}
+#free_four_2{display: none}
+
+/*=============二级页 未解锁状态--色彩课堂&自由画===============end==========*/
+
+/*=================三级页面-色彩课堂-第一章================begin============*/
+/*对应html--》》three_secai_1*/
+.upFixed{width: 100%;height: 6.50%;border: 0.3em solid #63A28F;border-left: none;border-right: none;display: flex;}
+#upFixed_Text{width: auto;height: 2.93%;position: absolute;top: 1.98%;left: 9.05%;}
+#upFixed_Img{width: auto;height: 2.93%;position: absolute;top: 1.78%;right: 4.17%}
+.text{width: 100%;height: 92.14%;color:#7D7D7D;font-weight: 400;font-size: 1.1em;overflow: auto;line-height: 1.3em}
+.text p{text-indent: 2em;}
+.text_h{font-size: 1.2em;font-weight: 600;text-indent: 1em;}
+#ceshianniu{width: 80.74%;height: 11.38%;margin-left: 10%;}
+/*=================三级页面-色彩课堂-第一章================end============*/
+
+/*================四级页面-色彩课堂-第一章================begin===========*/
+#photo_anniu{width: 8.33%;position: absolute;top: 13.82%;right: 6.39%;z-index: 2;}
+#ceyan_photo{width: 100%;height: 86.99%;position: absolute;bottom: 7.84%;left: 0;z-index: -1}
+#shuoming{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 9.26%; }
+#complete{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
+#photo_back{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}
+#up_hr{width: 89.35%;height: 1.0em;color:#D0D3D2;position: absolute;top: 10.84%;left: 55.55%;}
+/*================四级页面-色彩课堂-第一章================end===========*/
+
 /*=============二级页--画廊========begin========*/
 #goback_3{width:13.98%;height: auto;position: absolute;bottom: 10.62%;left: 43.52%;}
-#hualanghezi{width: 89.81%;height: auto;margin-top: 22.5%;margin-left: 4.63%}
-#hualanggezi li{float: left;}
-#hualanggezi li div{border: 12px solid #7CB7A5;width:25.55%;height:auto;margin-left: 5%;margin-bottom: 2.27%;box-shadow: 16px 16px 0px 0px rgba(0, 0, 0, 0.1);}
+.hualanggezi{width: 27.59%;height: 16.15%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
+#hualang_1{position: absolute;top: 22.5%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("../img/gallery/hualang_1.png");background-size: 100% 100%;}
+#hualang_2{position: absolute;top: 22.5%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("../img/gallery/hualang_2.png");background-size: 100% 100%;}
+#hualang_3{position: absolute;top: 22.5%;left: 66.94%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_4{position: absolute;top: 40.65%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_5{position: absolute;top: 40.65%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_6{position: absolute;top: 40.65%;left: 66.94%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_7{position: absolute;top: 59.67%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_8{position: absolute;top: 59.67%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_9{position: absolute;top: 59.67%;left: 66.94%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
 #last{width:22.13%;height: auto; position: absolute;left: 5.1%;bottom: 10.84%;}
 #next{width:22.13%;height: auto; position: absolute;right: 5.1%;;bottom: 10.84%;}
 
@@ -65,8 +110,7 @@ li{list-style-type: none;}
 
 /*=============二级页--设置，制作信息========begin========*/
 #wenzishuoming{width: 50.65%;height:auto;position: absolute;top:39.02%;left: 24.63%;}
-/*=============二级页--设置，制作信息========end========*
-=======
 /*=============二级页--设置，制作信息========end========*/
+
 
 

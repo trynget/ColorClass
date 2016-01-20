@@ -31,8 +31,24 @@ angular.module('starter.controllers', [])
 .controller('Second_1Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');
-    }
+    };
+        $scope.goThree_secai_1 = function() {
+            $state.go('three_secai_1');
+        }
 })
+    .controller('Three_secai_1Ctrl',function($scope ,$state) {
+        $scope.backSecond_1 = function() {
+            $state.go('second_1');
+        };
+        $scope.goFour_secai_1 = function() {
+            $state.go('four_secai_1');
+        }
+    })
+    .controller('Four_secai_1Ctrl',function($scope ,$state) {
+        $scope.backThree_secai_1 = function() {
+            $state.go('three_secai_1');
+        };
+    })
 .controller('Second_2Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');
