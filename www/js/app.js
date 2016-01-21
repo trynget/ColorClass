@@ -57,6 +57,46 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/four_secai_1.html',
             controller: "Four_secai_1Ctrl"
         })
+        .state('three_secai_2',{
+            url: '/three_secai_2',
+            templateUrl: 'templates/three_secai_2.html',
+            controller: "Three_secai_2Ctrl"
+        })
+        .state('four_secai_2',{
+            url: '/four_secai_2',
+            templateUrl: 'templates/four_secai_2.html',
+            controller: "Four_secai_2Ctrl"
+        })
+        .state('three_secai_3',{
+            url: '/three_secai_3',
+            templateUrl: 'templates/three_secai_3.html',
+            controller: "Three_secai_3Ctrl"
+        })
+        .state('four_secai_3',{
+            url: '/four_secai_3',
+            templateUrl: 'templates/four_secai_3.html',
+            controller: "Four_secai_3Ctrl"
+        })
+        .state('three_secai_4',{
+            url: '/three_secai_4',
+            templateUrl: 'templates/three_secai_4.html',
+            controller: "Three_secai_4Ctrl"
+        })
+        .state('four_secai_4',{
+            url: '/four_secai_4',
+            templateUrl: 'templates/four_secai_4.html',
+            controller: "Four_secai_4Ctrl"
+        })
+        .state('three_secai_5',{
+            url: '/three_secai_5',
+            templateUrl: 'templates/three_secai_5.html',
+            controller: "Three_secai_5Ctrl"
+        })
+        .state('four_secai_5',{
+            url: '/four_secai_5',
+            templateUrl: 'templates/four_secai_5.html',
+            controller: "Four_secai_5Ctrl"
+        })
         .state('second_2',{
             url: '/second_2',
             templateUrl: 'templates/second_2.html',
