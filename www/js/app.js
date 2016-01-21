@@ -7,8 +7,11 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-      //在本地存储中设置一个值rank表示当前解锁级数
-      localStorage.rank = localStorage.rank || 0;
+      //在本地存储中设置变量表示当前解锁状态，0表示未解锁，大于0的数字表示当前解锁等级，classRank表示色彩课堂，freeRank表示自由模式，galleryRank表示画廊
+      localStorage.classRank = localStorage.classRank || 1;
+      localStorage.freeRank = localStorage.freeRank || 0;
+      localStorage.galleryRank = localStorage.galleryRank || 0;
+
       if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)

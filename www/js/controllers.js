@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 //在这下面添加页面对应的控制器，每个控制器管理对应页面的功能，跳转等等
   .controller('startCtrl', function($scope, $state, showMsgService) {
-    //localStorage.rank为全局变量，在任意js中直接调用，例如此处直接输出localStorage.rank的值
-    showMsgService.showMsg(localStorage.rank);
+    //localStorage为全局变量，在任意js中直接调用，例如此处直接输出localStorage.galleryRank的值
+    showMsgService.showMsg(localStorage.galleryRank);
 
     $scope.goFirst = function() {
       $state.go('first');
