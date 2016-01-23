@@ -116,8 +116,40 @@ angular.module('starter.controllers', [])
 .controller('Second_2Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');
-    }
+    };
+        $scope.goThree_free_1 = function() {
+            $state.go('three_free_1');
+        };
+        $scope.goThree_free_2 = function() {
+            $state.go('three_free_2');
+        };
+        $scope.goThree_free_3 = function() {
+            $state.go('three_free_3');
+        };
+        $scope.goThree_free_4 = function() {
+            $state.go('three_free_4');
+        };
 })
+    .controller('Three_free_1Ctrl',function($scope ,$state) {
+        $scope.backSecond_2 = function() {
+            $state.go('second_2');
+        };
+    })
+    .controller('Three_free_2Ctrl',function($scope ,$state) {
+        $scope.backSecond_2 = function() {
+            $state.go('second_2');
+        };
+    })
+    .controller('Three_free_3Ctrl',function($scope ,$state) {
+        $scope.backSecond_2 = function() {
+            $state.go('second_2');
+        };
+    })
+    .controller('Three_free_4Ctrl',function($scope ,$state) {
+        $scope.backSecond_2 = function() {
+            $state.go('second_2');
+        };
+    })
 .controller('Second_3Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');

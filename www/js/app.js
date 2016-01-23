@@ -107,6 +107,21 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/three_free_1.html',
             controller: "Three_free_1Ctrl"
         })
+        .state('three_free_2',{
+            url: '/three_free_2',
+            templateUrl: 'templates/three_free_2.html',
+            controller: "Three_free_2Ctrl"
+        })
+        .state('three_free_3',{
+            url: '/three_free_3',
+            templateUrl: 'templates/three_free_3.html',
+            controller: "Three_free_3Ctrl"
+        })
+        .state('three_free_4',{
+            url: '/three_free_4',
+            templateUrl: 'templates/three_free_4.html',
+            controller: "Three_free_4Ctrl"
+        })
         .state('second_3',{
             url: '/second_3',
             templateUrl: 'templates/second_3.html',
