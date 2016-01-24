@@ -13,5 +13,20 @@ angular.module('starter.services', [])
         duration: 1500
       });
     }
-
   }]);
+
+//色彩课堂js文件
+//说明部分显示与隐藏
+function shuoming_on(){
+    document.getElementById("shuoming_text").style.display = "block";
+}
+function shuoming_off(){
+    document.getElementById("shuoming_text").style.display = "none";
+}
+//完成部分显示与隐藏
+function complete_on(){
+    document.getElementById("complete_text").style.display = "block";
+}
+function complete_off(){
+    document.getElementById("complete_text").style.display = "none";
+}
