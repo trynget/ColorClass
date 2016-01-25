@@ -9,10 +9,12 @@
         </div>
         <!--自由画菜单图片-->
         <img class="upmenu" src="img/freedraw/ziyouhua.png" alt=""/>
-        <div class="free_photo"></div>
+        <div class="free_photo">
+            <img ng-src="{{svgUrl}}" width="200%" height="200%" style="margin-left:-50%"/>
+        </div>
         <!--左右按钮-->
-        <img id="free_left" src="img/freedraw/free_left.png" alt=""/>
-        <img id="free_right" src="img/freedraw/free_right.png" alt=""/>
+        <img id="free_left" ng-click="goPre()" src="img/freedraw/free_left.png" alt=""/>
+        <img id="free_right" ng-click="goAft()" src="img/freedraw/free_right.png" alt=""/>
     </ion-content>
     <!--返回按钮-->
     <img class="goback" src="img/goback.gif" alt="" ng-click="backSecond_2()"/>

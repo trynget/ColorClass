@@ -130,25 +130,89 @@ angular.module('starter.controllers', [])
             $state.go('three_free_4');
         };
 })
-    .controller('Three_free_1Ctrl',function($scope ,$state) {
+    .controller('Three_free_1Ctrl',function($scope ,$state, svgList) {
         $scope.backSecond_2 = function() {
             $state.go('second_2');
         };
+        var svgList = svgList.getSvgList("fashion");
+        console.log(svgList);
+        var i = 0;
+        $scope.svgUrl = svgList[0];
+        $scope.goPre = function() {
+            if(i>0){
+                $scope.svgUrl = svgList[i-1];
+                i--;
+            }
+        };
+        $scope.goAft = function() {
+            if(i<4){
+                $scope.svgUrl = svgList[i+1];
+                i++;
+            }
+        }
     })
-    .controller('Three_free_2Ctrl',function($scope ,$state) {
+    .controller('Three_free_2Ctrl',function($scope ,$state, svgList) {
         $scope.backSecond_2 = function() {
             $state.go('second_2');
         };
+        var svgList = svgList.getSvgList("casual");
+        console.log(svgList);
+        var i = 0;
+        $scope.svgUrl = svgList[0];
+        $scope.goPre = function() {
+            if(i>0){
+                $scope.svgUrl = svgList[i-1];
+                i--;
+            }
+        };
+        $scope.goAft = function() {
+            if(i<4){
+                $scope.svgUrl = svgList[i+1];
+                i++;
+            }
+        }
     })
-    .controller('Three_free_3Ctrl',function($scope ,$state) {
+    .controller('Three_free_3Ctrl',function($scope ,$state, svgList) {
         $scope.backSecond_2 = function() {
             $state.go('second_2');
         };
+        var svgList = svgList.getSvgList("dress");
+        console.log(svgList);
+        var i = 0;
+        $scope.svgUrl = svgList[0];
+        $scope.goPre = function() {
+            if(i>0){
+                $scope.svgUrl = svgList[i-1];
+                i--;
+            }
+        };
+        $scope.goAft = function() {
+            if(i<5){
+                $scope.svgUrl = svgList[i+1];
+                i++;
+            }
+        }
     })
-    .controller('Three_free_4Ctrl',function($scope ,$state) {
+    .controller('Three_free_4Ctrl',function($scope ,$state, svgList) {
         $scope.backSecond_2 = function() {
             $state.go('second_2');
         };
+        var svgList = svgList.getSvgList("children");
+        console.log(svgList);
+        var i = 0;
+        $scope.svgUrl = svgList[0];
+        $scope.goPre = function() {
+            if(i>0){
+                $scope.svgUrl = svgList[i-1];
+                i--;
+            }
+        };
+        $scope.goAft = function() {
+            if(i<4){
+                $scope.svgUrl = svgList[i+1];
+                i++;
+            }
+        }
     })
 .controller('Second_3Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {

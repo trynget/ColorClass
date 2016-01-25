@@ -108,7 +108,7 @@ li{list-style-type: none;}
 /*================四级页面-色彩课堂-第一章================end===========*/
 
 /*================三级页面-自由画==============begin============*/
-.free_photo{width: 72.87%;height: 42.55%;position: absolute;top: 26.01%;left: 12.78%;border: 0.4em solid #81BCAA;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
+.free_photo{width: 72.87%;height: 42.55%;position: absolute;top: 26.01%;left: 12.78%;border: 0.4em solid #81BCAA;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);overflow: hidden}
 #free_left{width: 6.11%;height: 5.74%;position: absolute;top: 43.09%;left: 2.78%;}
 #free_right{width: 6.11%;height: 5.74%;position: absolute;top: 43.09%;right: 2.78%;}
 #free_level{position: absolute;top: 22.35%;left: 13.5%;color: #81BCAA;}

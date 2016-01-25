@@ -13,7 +13,46 @@ angular.module('starter.services', [])
         duration: 1500
       });
     }
-  }]);
+  }])
+
+.factory('svgList',function() {
+        var svgList = {
+            "fashion":[
+                "img/svg/1_1.svg",
+                "img/svg/1_2.svg",
+                "img/svg/1_3.svg",
+                "img/svg/1_4.svg",
+                "img/svg/1_5.svg"
+            ],
+            "casual":[
+                "img/svg/2_1.svg",
+                "img/svg/2_2.svg",
+                "img/svg/2_3.svg",
+                "img/svg/2_4.svg",
+                "img/svg/2_5.svg"
+            ],
+            "dress":[
+                "img/svg/3_1.svg",
+                "img/svg/3_2.svg",
+                "img/svg/3_3.svg",
+                "img/svg/3_4.svg",
+                "img/svg/3_5.svg",
+                "img/svg/3_6.svg"
+            ],
+            "children":[
+                "img/svg/4_1.svg",
+                "img/svg/4_2.svg",
+                "img/svg/4_3.svg",
+                "img/svg/4_4.svg",
+                "img/svg/4_5.svg"
+            ]
+        };
+        return {
+            getSvgList: function(name) {
+                return svgList[name];
+            }
+        }
+    });
 
 //色彩课堂js文件
 //说明部分显示与隐藏
