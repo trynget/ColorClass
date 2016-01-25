@@ -44,9 +44,6 @@ angular.module('starter.controllers', [])
         $scope.goThree_secai_4 = function() {
             $state.go('three_secai_4');
         };
-        $scope.goThree_secai_5 = function() {
-            $state.go('three_secai_5');
-        };
 })
     .controller('Three_secai_1Ctrl',function($scope ,$state) {
         $scope.backSecond_1 = function() {
@@ -98,19 +95,6 @@ angular.module('starter.controllers', [])
     .controller('Four_secai_4Ctrl',function($scope ,$state) {
         $scope.backThree_secai_4 = function() {
             $state.go('three_secai_4');
-        };
-    })
-    .controller('Three_secai_5Ctrl',function($scope ,$state) {
-        $scope.backSecond_1 = function() {
-            $state.go('second_1');
-        };
-        $scope.goFour_secai_5 = function() {
-            $state.go('four_secai_5');
-        }
-    })
-    .controller('Four_secai_5Ctrl',function($scope ,$state) {
-        $scope.backThree_secai_5 = function() {
-            $state.go('three_secai_5');
         };
     })
 .controller('Second_2Ctrl',function($scope ,$state) {

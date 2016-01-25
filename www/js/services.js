@@ -69,3 +69,13 @@ function complete_on(){
 function complete_off(){
     document.getElementById("complete_text").style.display = "none";
 }
+//调色板弹出与隐藏
+function tiao_seban(){
+    var ts_click = document.getElementById("seban_1");
+    if(ts_click.style.display =="none"){
+        ts_click.style.display = "block";
+    }else{
+        ts_click.style.display = "none";
+    }
+}
+//

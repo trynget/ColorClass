@@ -87,16 +87,6 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/four_secai_4.html',
             controller: "Four_secai_4Ctrl"
         })
-        .state('three_secai_5',{
-            url: '/three_secai_5',
-            templateUrl: 'templates/three_secai_5.html',
-            controller: "Three_secai_5Ctrl"
-        })
-        .state('four_secai_5',{
-            url: '/four_secai_5',
-            templateUrl: 'templates/four_secai_5.html',
-            controller: "Four_secai_5Ctrl"
-        })
         .state('second_2',{
             url: '/second_2',
             templateUrl: 'templates/second_2.html',
