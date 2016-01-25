@@ -1,5 +1,8 @@
 <ion-view>
     <ion-content scroll="false">
+        <!--本页层数 z-index-->
+        <!--中间的填图为-1（最底层）,参考图片按钮即图片上面的按钮为2（防止以后加入其它层，所以跳过1层）色板及色板翻页为3层
+        说明以及完成弹出框为4层，关闭按钮为5层-->
         <div id="sebiao_1" class="sebiao"></div>
         <div id="sebiao_2" class="sebiao"></div>
         <div id="sebiao_3" class="sebiao"></div>
@@ -7,7 +10,7 @@
         <div id="sebiao_5" class="sebiao"></div>
         <div id="sebiao_6" class="sebiao"></div>
         <div id="sebiao_7" class="sebiao"></div>
-        <img id="tiaoseban" src="img/colorclass/tiaoseban.png" alt=""/>
+        <img id="tiaoseban" src="img/colorclass/tiaoseban.png" onclick="tiao_seban()" alt=""/>
         <hr id="up_hr"/>
         <hr id="down_hr"/>
         <img id="photo_anniu" src="img/colorclass/photo_anniu.png" alt=""/>
@@ -21,8 +24,43 @@
         <img id="complete" src="img/colorclass/complete.png" onclick="complete_on()" alt=""/>
         <!--这个div用来代替关闭-->
         <div id="delete_complete" onclick="complete_off()"></div>
-        <img id="complete_text" src="img/colorclass/complete_text.png" alt=""/>
+        <img id="complete_text" src="img/colorclass/complete_text_1.png" alt=""/>
         <img id="photo_back" src="img/colorclass/photo_back.png" ng-click="backThree_secai_1()" alt=""/>
-        <img src="" alt=""/>
+        <!--色板-->
+        <!--色板1-->
+        <div class="seban" id="seban_1">
+            <div style="background-color:#F9CAC4" class="ts"></div>
+            <div style="background-color:#F6AFC1" class="ts"></div>
+            <div style="background-color:#EE2C75" class="ts"></div>
+            <div style="background-color:#ED3125" class="ts"></div>
+            <div style="background-color:#AC0634" class="ts"></div>
+            <div style="background-color:#A74D0E" class="ts"></div>
+            <div style="background-color:#F9AB84" class="ts"></div>
+            <div style="background-color:#F08C1C" class="ts"></div>
+            <div style="background-color:#FCB912" class="ts"></div>
+            <div style="background-color:#FFDD00" class="ts"></div>
+            <div style="background-color:#C0D82C" class="ts"></div>
+            <div style="background-color:#8DC73D" class="ts"></div>
+            <div style="background-color:#C8D5A7" class="ts"></div>
+            <div style="background-color:#008651" class="ts"></div>
+            <div style="background-color:#00664E" class="ts"></div>
+            <div style="background-color:#67C7C5" class="ts"></div>
+            <div style="background-color:#017A83" class="ts"></div>
+            <div style="background-color:#AAE0EC" class="ts"></div>
+            <div style="background-color:#7DB1C9" class="ts"></div>
+            <div style="background-color:#0064A2" class="ts"></div>
+            <div style="background-color:#792B81" class="ts"></div>
+            <div style="background-color:#55628F" class="ts"></div>
+            <div style="background-color:#C2C3DF" class="ts"></div>
+            <div style="background-color:#FFFFFF;border: 1px solid #AAAAAA" class="ts"></div>
+            <div style="background-color:#C6C7C9" class="ts"></div>
+            <div style="background-color:#919596" class="ts"></div>
+            <div style="background-color:#000000" class="ts"></div>
+            <img class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+        <!--色板2-->
+        <!--<div class="seban" id="seban_2">-->
+            <!--<div style="background-color:#;" class="ts"></div>-->
+        <!--</div>-->
     </ion-content>
 </ion-view>
