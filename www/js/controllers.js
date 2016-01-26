@@ -57,6 +57,17 @@ angular.module('starter.controllers', [])
         $scope.backThree_secai_1 = function() {
             $state.go('three_secai_1');
         };
+        var svgUrl = "img/svg/1_1.svg";
+        $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
+        setTimeout(function(){
+          var paths = document.getElementById("ceyan_photo").children[0].getSVGDocument().getElementsByTagName("path");
+          var len = paths.length;
+          for(var i = 0;i < len;i++){
+            paths[i].onclick = function(){
+              this.style.fill = "green";
+            };
+          }
+        },500);
     })
     .controller('Three_secai_2Ctrl',function($scope ,$state) {
         $scope.backSecond_1 = function() {
