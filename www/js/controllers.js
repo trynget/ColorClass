@@ -59,15 +59,24 @@ angular.module('starter.controllers', [])
         };
         var svgUrl = "img/svg/1_1.svg";
         $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
-        setTimeout(function(){
+        $scope.colorList = [
+          //第一组色值
+          ["#2B2B2B","#BEDBBC","#C0D7DD","#D6C1DE","#C4CFAA","#B6BCC4","#D7D9D8"],
+          //第二组色值
+          ["#F9CAC4","#F6AFC1","#EE2C75","#ED3125","#AC0634","#A74D0E","#F9AB84","#F08C1C","#FCB912","#FFDD00","#C0D82C","#8DC73D","#C8D5A7","#008651","#00664E","#67C7C5","#017A83","#AAE0EC","#7DB1C9","#0064A2","#792B81","#55628F","#C2C3DF","#FFFFFF","#C6C7C9","#919596","#000000"],
+          //第三组色值，待添加
+          []
+        ];
+        $scope.getColor = function(n,index){
+          var color = $scope.colorList[n][index];
           var paths = document.getElementById("ceyan_photo").children[0].getSVGDocument().getElementsByTagName("path");
           var len = paths.length;
           for(var i = 0;i < len;i++){
             paths[i].onclick = function(){
-              this.style.fill = "green";
+              this.style.fill = color;
             };
           }
-        },500);
+        };
     })
     .controller('Three_secai_2Ctrl',function($scope ,$state) {
         $scope.backSecond_1 = function() {
