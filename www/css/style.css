@@ -85,29 +85,37 @@ li{list-style-type: none;}
 /*=================三级页面-色彩课堂-第一章---第五章================end============*/
 
 /*================四级页面-色彩课堂-第一章================begin===========*/
-#tiaoseban{width: 8.33%;height: auto;position: absolute;top: 3.20%;right: 6.08%;}
-#up_hr{width: 89.35%;height: 0.1em;color:#D0D3D2;position: absolute;top: 10.84%;left: 5.55%;}
+/*<!--本页层数 z-index-->*/
+/*<!--中间的填图为-1（最底层）,参考图片按钮即图片上面的按钮为2 关闭参考图片层3 参考图片9（防止以后加入其它层，所以跳过1层）*/
+/*色板及色板翻页为5层，关闭说明层10，说明以及完成弹出框为7层，关闭按钮为8层-->*/
+#tiaoseban{z-index: 3;width: 8.33%;height: auto;position: absolute;top: 3.20%;right: 6.08%;}
+#up_hr{z-index: 2;width: 89.35%;height: 0.1em;color:#D0D3D2;position: absolute;top: 10.84%;left: 5.55%;}
 .sebiao{width: 8.33%;height: 4.77%;border-radius: 0.5em;}
-#sebiao_1{background-color: #2B2B2B;position: absolute;top: 3.14%;left: 6.76%;}
-#sebiao_2{background-color: #BEDBBC;position: absolute;top: 3.14%;left: 18.33%;}
-#sebiao_3{background-color: #C0D7DD;position: absolute;top: 3.14%;left: 29.63%;}
-#sebiao_4{background-color: #D6C1DE;position: absolute;top: 3.14%;left: 40.92%;}
-#sebiao_5{background-color: #C4CFAA;position: absolute;top: 3.14%;left: 52.31%;}
-#sebiao_6{background-color: #B6BCC4;position: absolute;top: 3.14%;left: 63.24%;}
-#sebiao_7{background-color: #D7D9D8;position: absolute;top: 3.14%;left: 74.35%;}
-#down_hr{width: 89.35%;height: 0.1em;color: #D0D3D2;position: absolute;bottom: 10.62%;left: 5.55%;}
-#photo_anniu{width: 8.33%;position: absolute;top: 13.82%;right: 6.39%;z-index: 2;}
-#ceyan_photo{width: 100%;height: 86.99%;position: absolute;bottom: 5.84%;left: 0;z-index: 1;overflow: auto}
-#shuoming{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 9.26%; }
-#delete_shuoming{width: 18%;height: 14%;position: absolute;bottom: 23.45%;right: 2.55%;z-index:5;}
-#shuoming_text{display:none;width: 90.74%;height: auto;position: absolute;bottom: 13.55%;left: 3.88%;z-index: 4;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
-#complete{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
-#complete_text{display:none;width: 92.13%;height: auto;position: absolute;top: 29.27%;left: 3.7%;z-index: 4;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
-#delete_complete{width: 20%;height: 15%;position: absolute;top: 25.26%;right: 1.16%;z-index: 5;}
-#photo_back{width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}
-.seban{display:none;width: 37.96%;height: 73.71%;position: absolute;top: 12.47%;right: 5.09%;background-color: #ffffff;border: 0.3em solid #BFBFBF;z-index: 3}
+/*上边色标*/
+#sebiao_1{z-index:1;background-color: #2B2B2B;position: absolute;top: 3.14%;left: 6.76%;}
+#sebiao_2{z-index:1;background-color: #BEDBBC;position: absolute;top: 3.14%;left: 18.33%;}
+#sebiao_3{z-index:1;background-color: #C0D7DD;position: absolute;top: 3.14%;left: 29.63%;}
+#sebiao_4{z-index:1;background-color: #D6C1DE;position: absolute;top: 3.14%;left: 40.92%;}
+#sebiao_5{z-index:1;background-color: #C4CFAA;position: absolute;top: 3.14%;left: 52.31%;}
+#sebiao_6{z-index:1;background-color: #B6BCC4;position: absolute;top: 3.14%;left: 63.24%;}
+#sebiao_7{z-index:1;background-color: #D7D9D8;position: absolute;top: 3.14%;left: 74.35%;}
+#down_hr{z-index: 2;width: 89.35%;height: 0.1em;color: #D0D3D2;position: absolute;bottom: 10.62%;left: 5.55%;}
+#photo_anniu{z-index: 2;width: 8.33%;position: absolute;top: 13.82%;right: 6.39%;}
+#photo_1{z-index: 5;display: none; width: 88.70%;height: auto;position: absolute;top: 15.93%;left: 5.65%;}
+#photo_bj{display: none;width:100%;height: 100%;z-index:4;position: absolute;top: 0;left: 0;filter:alpha(opacity=80); /*IE滤镜，透明度50%*/  -moz-opacity:0.8; /*Firefox私有，透明度50%*/  opacity:0.8;/*其他，透明度50%*/}
+#ceyan_photo{z-index:1;width: 100%;height: 78.99%;position: absolute;bottom: 10.44%;left: 0;overflow: auto}
+#shuoming{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 9.26%; }
+#shuoming_bj{display: none;z-index: 6;width:100%;height: 100%;position: absolute;top: 0;left: 0;filter:alpha(opacity=80); /*IE滤镜，透明度50%*/  -moz-opacity:0.8; /*Firefox私有，透明度50%*/  opacity:0.8;/*其他，透明度50%*/}
+#delete_shuoming{z-index: 8;display: none;width: 18%;height: 14%;position: absolute;bottom: 23.45%;right: 2.55%;}
+#shuoming_text{z-index: 7;display:none;width: 90.74%;height: auto;position: absolute;bottom: 13.55%;left: 3.88%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
+#complete{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
+#complete_text{z-index: 7;display:none;width: 92.13%;height: auto;position: absolute;top: 29.27%;left: 3.7%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
+#delete_complete{z-index: 8;display: none;width: 20%;height: 15%;position: absolute;top: 25.26%;right: 1.16%;}
+#photo_back{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}
+.seban{z-index:3;display:none;width: 37.96%;height: 73.71%;position: absolute;top: 12.47%;right: 5.09%;background-color: #ffffff;border: 0.3em solid #BFBFBF;}
 .ts{width:21.75%;height:6.03%;border-radius: 0.5em;background-color: #007aff;float: left;margin-left: 8.5%;margin-top: 9.48%;}
-.seban_right{width: 16.5%;height: auto;position: absolute;bottom: 5%;right: 10%;z-index: 3;}
+.seban_right{width: 16.5%;height: auto;position: absolute;bottom: 5%;right: 10%;}
+.seban_left{width: 16.5%;height: auto;position: absolute;bottom: 5%;left: 10%;}
 /*================四级页面-色彩课堂-第一章================end===========*/
 
 /*================三级页面-自由画==============begin============*/
@@ -134,7 +142,7 @@ li{list-style-type: none;}
 #next{width:22.13%;height: auto; position: absolute;right: 5.1%;;bottom: 10.84%;}
 
 /*长按删除页面*/
-#delete{width: 80.83%;height: 32.14%;background-color:#ffffff;position: absolute;top: 29.27%;left: 8.89%;border: 0.3em solid #7CB7A5;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);z-index: 3;}
+#delete{width: 80.83%;height: 32.14%;background-color:#ffffff;position: absolute;top: 29.27%;left: 8.89%;border: 0.3em solid #7CB7A5;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);: 3;}
 #text_delete{width: 39.86%;height: auto;position: absolute;top:24.07%;left:11.49%;}
 #photo_delete{width: 23.14%;height: auto;position: absolute;top:40.72%;left:17.24%;}
 #photo_delete_yes{width: 16.49%;height: auto;position: absolute;top: 19.34%;right: 15.98%;}

@@ -1,26 +1,41 @@
 <ion-view>
     <ion-content scroll="false">
-        <div id="sebiao_1" class="sebiao"></div>
-        <div id="sebiao_2" class="sebiao"></div>
-        <div id="sebiao_3" class="sebiao"></div>
-        <div id="sebiao_4" class="sebiao"></div>
-        <div id="sebiao_5" class="sebiao"></div>
-        <div id="sebiao_6" class="sebiao"></div>
-        <div id="sebiao_7" class="sebiao"></div>
-        <img id="tiaoseban" src="img/colorclass/tiaoseban.png" alt=""/>
+
+        <!--用ng-repeat来生成重复的元素-->
+        <div ng-repeat="color in colorList[0]" id="sebiao_{{$index+1}}" class="sebiao" ng-click="getColor(0,$index)"></div>
+        <img id="tiaoseban" src="img/colorclass/tiaoseban.png" onclick="tiao_seban()" alt=""/>
         <hr id="up_hr"/>
         <hr id="down_hr"/>
-        <img id="photo_anniu" src="img/colorclass/photo_anniu.png" alt=""/>
-        <img id="ceyan_photo" src="img/colorclass/ceyan_1.png" alt=""/>
+        <!--参考图片-->
+        <img id="photo_anniu" src="img/colorclass/photo_anniu.png" onclick="photoanniu_on()" alt=""/>
+        <img id="photo_bj" src="img/colorclass/white_bj.png"  onclick="photoanniu_off()" alt=""/>
+        <img class="cankao_photo" id="photo_1" src="img/colorclass/photo_3.jpg" alt=""/>
+        <!--引入填图图片,填色的svg图片会加载在下面这个div中-->
+        <div id="ceyan_photo">
+
+        </div>
+        <!--说明部分-->
         <img id="shuoming" src="img/colorclass/shuoming.png" onclick="shuoming_on()" alt=""/>
         <!--这个div用来代替关闭-->
         <div id="delete_shuoming" onclick="shuoming_off()"></div>
+        <img id="shuoming_bj" src="img/colorclass/white_bj.png"  onclick="shuoming_off()" alt=""/>
+        <!--说明部分弹出框-->
         <img id="shuoming_text" src="img/colorclass/shuoming_text.png" alt=""/>
         <!--完成部分-->
         <img id="complete" src="img/colorclass/complete.png" onclick="complete_on()" alt=""/>
         <!--这个div用来代替关闭-->
         <div id="delete_complete" onclick="complete_off()"></div>
+        <!--完成部分弹出框-->
         <img id="complete_text" src="img/colorclass/complete_text_3.png" alt=""/>
+        <!--返回按钮-->
         <img id="photo_back" src="img/colorclass/photo_back.png" ng-click="backThree_secai_3()" alt=""/>
+        <!--色板-->
+        <!--色板1-->
+        <div class="seban" id="seban_1">
+            <!--用ng-repeat来生成重复的元素-->
+            <div ng-repeat="color in colorList[1]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(1,$index)"></div>
+            <img class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
+            <img class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
     </ion-content>
 </ion-view>

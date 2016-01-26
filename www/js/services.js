@@ -58,16 +58,22 @@ angular.module('starter.services', [])
 //说明部分显示与隐藏
 function shuoming_on(){
     document.getElementById("shuoming_text").style.display = "block";
+    document.getElementById("shuoming_bj").style.display = "block";
+    document.getElementById("delete_shuoming").style.display = "block";
 }
 function shuoming_off(){
     document.getElementById("shuoming_text").style.display = "none";
+    document.getElementById("shuoming_bj").style.display = "none";
+    document.getElementById("delete_shuoming").style.display = "none";
 }
 //完成部分显示与隐藏
 function complete_on(){
     document.getElementById("complete_text").style.display = "block";
+    document.getElementById("delete_complete").style.display = "block";
 }
 function complete_off(){
     document.getElementById("complete_text").style.display = "none";
+    document.getElementById("delete_complete").style.display = "none";
 }
 //调色板弹出与隐藏
 function tiao_seban(){
@@ -78,4 +84,17 @@ function tiao_seban(){
         ts_click.style.display = "none";
     }
 }
-//
+//参考图片按钮
+function photoanniu_on(){
+    document.getElementById("photo_1").style.display = "block";
+    document.getElementById("photo_bj").style.display = "block";
+}
+function photoanniu_off(){
+    document.getElementById("photo_1").style.display = "none";
+    document.getElementById("photo_bj").style.display = "none";
+}
+//色板翻页
+function seban_fy(){
+    var Now =  document.getElementsByTagName("div");
+    window.alert(Now);
+}
