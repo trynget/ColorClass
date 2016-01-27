@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-content scroll="false">
+        <!--本页层数 z-index-->
+        <!--中间的填图为-1（最底层）,参考图片按钮即图片上面的按钮为2（防止以后加入其它层，所以跳过1层）色板及色板翻页为3层
+        说明以及完成弹出框为4层，关闭按钮为5层-->
+        <!--用ng-repeat来生成重复的元素-->
+        <div ng-repeat="color in colorList[0]" id="sebiao_{{$index+1}}" class="sebiao" ng-click="getColor(0,$index)"></div>
+        <img id="tiaoseban" src="img/colorclass/tiaoseban.png" onclick="tiao_seban()" alt=""/>
+        <hr id="up_hr"/>
+        <hr id="down_hr"/>
+        <!--引入填图图片,填色的svg图片会加载在下面这个div中-->
+        <div id="ceyan_photo">
+
+        </div>
+        <!--说明部分-->
+        <img id="shuoming" src="img/colorclass/shuoming.png" onclick="shuoming_on()" alt=""/>
+        <!--这个div用来代替关闭-->
+        <div id="delete_shuoming" onclick="shuoming_off()"></div>
+        <img id="shuoming_bj" src="img/colorclass/white_bj.png"  onclick="shuoming_off()" alt=""/>
+        <!--说明部分弹出框-->
+        <img id="shuoming_text" src="img/freedraw/shuoming_text.png" alt=""/>
+        <!--完成部分-->
+        <img id="complete" src="img/colorclass/complete.png" onclick="complete_on()" alt=""/>
+        <!--这个div用来代替关闭-->
+        <div id="delete_complete" onclick="complete_off()"></div>
+        <!--完成部分弹出框-->
+        <img id="complete_text" src="img/freedraw/complete_text.png" alt=""/>
+        <!--返回按钮-->
+        <img id="photo_back" src="img/colorclass/photo_back.png" ng-click="backThree_secai_1()" alt=""/>
+        <!--色板-->
+        <!--色板1-->
+        <div class="seban" id="seban_1">
+            <!--用ng-repeat来生成重复的元素-->
+            <div  ng-repeat="color in colorList[1]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(1,$index)"></div>
+            <!--<div  id="seban_2" onclick="seban_fy()" ng-repeat="color in colorList[2]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(2,$index)"></div>-->
+            <!--<div  id="seban_3" onclick="seban_fy()" ng-repeat="color in colorList[3]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(3,$index)"></div>-->
+            <!--<div  id="seban_4" onclick="seban_fy()" ng-repeat="color in colorList[4]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(4,$index)"></div>-->
+            <!--<div  id="seban_5" onclick="seban_fy()" ng-repeat="color in colorList[5]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(5,$index)"></div>-->
+            <!--<img class="seban_left" src="img/colorclass/seban_left.png" alt=""/>-->
+            <img class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+    </ion-content>
+</ion-view>

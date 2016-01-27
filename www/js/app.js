@@ -97,6 +97,11 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/three_free_1.html',
             controller: "Three_free_1Ctrl"
         })
+        .state('four_free_1',{
+            url: '/four_free_1',
+            templateUrl: 'templates/four_free_1.html',
+            controller: "Four_free_1Ctrl"
+        })
         .state('three_free_2',{
             url: '/three_free_2',
             templateUrl: 'templates/three_free_2.html',
