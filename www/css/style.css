@@ -34,14 +34,14 @@ li{list-style-type: none;}
 .hualang{position: absolute;width: auto;height: 20.6%;top:49.32%;right: 52.77%;}
 #shezhi{position: absolute;width: auto;height: 20.6%;top:49.32%;left: 52.77%;}
 /*#middle{width:auto;height:6.77%; position: absolute;top: 44.5%;right: 44.5%;}*/
-#middle{width:auto;height:6.77%; position: absolute;top: 44.5%;right: 45.2%;}
+#middle{width:auto;height:6.77%; position: absolute;top: 44.5%;right: 44.2%;}
 /*====一级页 全解锁状态=======end*/
 
 /*==========一级页 未解锁状态==========begin======*/
-#ziyouon{}
-#ziyouoff{display: none}
-#hualangon{}
-#hualangoff{display: none}
+#ziyouon{display: none;}
+#ziyouoff{}
+#hualangon{display: none;}
+#hualangoff{}
 /*==========一级页 未解锁状态==========end======*/
 
 /*=============二级页--色彩课堂&自由画======begin==========*/
@@ -53,23 +53,21 @@ li{list-style-type: none;}
 /*=============二级页--色彩课堂&自由画======end==========*/
 
 /*=============二级页 未解锁状态--色彩课堂===============begin==========*/
-#secai_two_1{}
-#secai_two_2{display: none}
-#secai_three_1{}
-#secai_three_2{display: none}
-#secai_four_1{}
-#secai_four_2{display: none}
-#secai_five_1{}
-#secai_five_2{display: none}
+#secai_two_1{display: none;}
+#secai_two_2{}
+#secai_three_1{display: none;}
+#secai_three_2{}
+#secai_four_1{display: none;}
+#secai_four_2{}
 /*=============二级页 未解锁状态--色彩课堂===============end==========*/
 
 /*=============二级页 未解锁状态--自由画===============begin==========*/
-#free_two_1{}
-#free_two_2{display: none}
-#free_three_1{}
-#free_three_2{display: none}
-#free_four_1{}
-#free_four_2{display: none}
+#free_two_1{display: none}
+#free_two_2{}
+#free_three_1{display: none}
+#free_three_2{}
+#free_four_1{display: none}
+#free_four_2{}
 /*=============二级页 未解锁状态--自由画===============end==========*/
 
 
@@ -109,7 +107,7 @@ li{list-style-type: none;}
 #shuoming_bj{display: none;z-index: 6;width:100%;height: 100%;position: absolute;top: 0;left: 0;filter:alpha(opacity=80); /*IE滤镜，透明度50%*/  -moz-opacity:0.8; /*Firefox私有，透明度50%*/  opacity:0.8;/*其他，透明度50%*/}
 #delete_shuoming{z-index: 8;display: none;width: 18%;height: 14%;position: absolute;bottom: 23.45%;right: 2.55%;}
 #shuoming_text{z-index: 7;display:none;width: 90.74%;height: auto;position: absolute;bottom: 13.55%;left: 3.88%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
-#complete{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
+.complete{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
 #complete_text{z-index: 7;display:none;width: 92.13%;height: auto;position: absolute;top: 29.27%;left: 3.7%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
 #delete_complete{z-index: 8;display: none;width: 20%;height: 15%;position: absolute;top: 25.26%;right: 1.16%;}
 #photo_back{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}

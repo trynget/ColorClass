@@ -54,6 +54,9 @@ angular.module('starter.services', [])
         }
     });
 
+//解锁状态
+//主菜单
+
 //色彩课堂js文件
 //说明部分显示与隐藏
 function shuoming_on(){
