@@ -11,12 +11,12 @@
             <!--四章按钮-->
             <div id="twosecaimainanniu_2hezi">
                 <img id="twosecaimainone" src="img/freedraw/one.png" ng-click="goThree_free_1()" alt=""/>
-                <img class="twosecaimainanniu_2" id="free_two_1" src="img/freedraw/two.png" ng-click="goThree_free_2()" alt=""/>
-                <img class="twosecaimainanniu_2" id="free_two_2" src="img/freedraw/lock.png"  alt=""/>
-                <img class="twosecaimainanniu_2" id="free_three_1" src="img/freedraw/three.png" ng-click="goThree_free_3()" alt=""/>
-                <img class="twosecaimainanniu_2" id="free_three_2" src="img/freedraw/lock.png" alt=""/>
-                <img class="twosecaimainanniu_2" id="free_four_1" src="img/freedraw/four.png" ng-click="goThree_free_4()" alt=""/>
-                <img class="twosecaimainanniu_2" id="free_four_2" src="img/freedraw/lock.png" alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank>=2" src="img/freedraw/two.png" ng-click="goThree_free_2()" alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank<2" src="img/freedraw/lock.png"  alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank>=3" src="img/freedraw/three.png" ng-click="goThree_free_3()" alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank<3" src="img/freedraw/lock.png" alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank>=4" src="img/freedraw/four.png" ng-click="goThree_free_4()" alt=""/>
+                <img class="twosecaimainanniu_2" ng-if="freeRank<4" src="img/freedraw/lock.png" alt=""/>
             </div>
         </div>
     </ion-content>

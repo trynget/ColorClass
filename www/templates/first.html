@@ -7,12 +7,12 @@
       <!--<div class="container">-->
           <!--色彩课堂按钮-->
           <img id="secai" src="img/mainmenu/button-secaiketang.png" ng-click="goSecond_1()" alt=""/>
-          <!--自由画on和off分别对应已解锁和未解锁自由模式两种状态在css中用display来隐藏，通过js控制，暂时未控制-->
-          <img class="ziyou" id="ziyouon" src="img/mainmenu/button-ziyoumoshi.png" ng-click="goSecond_2()" alt=""/>
-          <img class="ziyou" id="ziyouoff" src="img/mainmenu/button-ziyousuo.png" alt=""/>
-          <!--画廊on和off分别对应已解锁和未解锁画廊两种状态在css中用display来隐藏，通过js控制，暂时未控制-->
-          <img class="hualang" id="hualangon" src="img/mainmenu/button-hualang.png" ng-click="goSecond_3()" alt=""/>
-          <img class="hualang" id="hualangoff" src="img/mainmenu/button-hualangsuo.png" alt=""/>
+          <!--自由画on和off分别对应已解锁和未解锁自由模式两种状态-->
+          <img class="ziyou" ng-if="freeRank>0" src="img/mainmenu/button-ziyoumoshi.png" ng-click="goSecond_2()" alt=""/>
+          <img class="ziyou" ng-if="freeRank==0" src="img/mainmenu/button-ziyousuo.png" alt=""/>
+          <!--画廊on和off分别对应已解锁和未解锁画廊两种状态-->
+          <img class="hualang" ng-if="galleryRank>0" src="img/mainmenu/button-hualang.png" ng-click="goSecond_3()" alt=""/>
+          <img class="hualang" ng-if="galleryRank==0" src="img/mainmenu/button-hualangsuo.png" alt=""/>
           <!--设置按钮-->
           <img id="shezhi" src="img/mainmenu/button-shezhi.png" ng-click="goSecond_4()" alt=""/>
           <!--中心小菱形-->

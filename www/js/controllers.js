@@ -10,6 +10,9 @@ angular.module('starter.controllers', [])
   })
   .controller('firstCtrl',function($scope ,$state, $ionicHistory) {
 
+        $scope.galleryRank = parseInt(localStorage.galleryRank);
+        $scope.freeRank = parseInt(localStorage.freeRank);
+
         $scope.goSecond_1 = function() {
           $state.go('second_1');
         };
@@ -29,6 +32,7 @@ angular.module('starter.controllers', [])
     $scope.backFirst = function() {
         history.back();
     };
+        $scope.classRank = parseInt(localStorage.classRank);
         $scope.goThree_secai_1 = function() {
             $state.go('three_secai_1');
         };
@@ -51,7 +55,7 @@ angular.module('starter.controllers', [])
           $state.go('four_secai_1');
         }
     })
-    .controller('Four_secai_1Ctrl',function($scope ,$state, $rootScope) {
+    .controller('Four_secai_1Ctrl',function($scope ,$state, $rootScope, $ionicHistory) {
         $scope.backThree = function() {
             history.back();
         };
@@ -90,6 +94,19 @@ angular.module('starter.controllers', [])
           console.log(svgStored);
           localStorage.svgStored = JSON.stringify(svgStored);
         };
+        $scope.drawComplete_off = function() {
+            complete_off();
+            var classRank=parseInt(localStorage.classRank),
+                galleryRank=parseInt(localStorage.galleryRank),
+                freeRank=parseInt(localStorage.freeRank);
+            if(galleryRank==0) {
+                localStorage.galleryRank = galleryRank + 1;
+            }
+            localStorage.classRank = classRank + 1;
+            localStorage.freeRank = freeRank + 1;
+            $ionicHistory.clearCache();
+            $state.go('first');
+        }
 
     })
     .controller('Three_secai_2Ctrl',function($scope ,$state, $rootScope) {
@@ -124,8 +141,9 @@ angular.module('starter.controllers', [])
 
 .controller('Second_2Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
-        $state.go('first');
+        history.back();
     };
+        $scope.freeRank = parseInt(localStorage.freeRank);
         $scope.goThree_free_1 = function() {
             $state.go('three_free_1');
         };
