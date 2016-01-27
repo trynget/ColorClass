@@ -125,6 +125,7 @@ li{list-style-type: none;}
 #free_right{width: 6.11%;height: 5.74%;position: absolute;top: 43.09%;right: 2.78%;}
 #free_level{position: absolute;top: 22.35%;left: 13.5%;color: #81BCAA;}
 .level{width: 4.00%;height: auto;}
+#date{font-size: 1.2em;color: #66A592;position: absolute;bottom: 21.41%;right: 5.56%;}
 /*================三级页面-自由画==============end============*/
 
 /*=============二级页--画廊========begin========*/

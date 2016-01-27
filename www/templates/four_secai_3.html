@@ -34,8 +34,34 @@
         <div class="seban" id="seban_1">
             <!--用ng-repeat来生成重复的元素-->
             <div ng-repeat="color in colorList[1]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(1,$index)"></div>
-            <img class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
-            <img class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+            <img onclick="paging_right_1()" class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+        <!--色板2-->
+        <div class="seban" id="seban_2">
+            <!--用ng-repeat来生成重复的元素-->
+            <div ng-repeat="color in colorList[2]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(2,$index)"></div>
+            <img onclick="paging_left_2()" class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
+            <img onclick="paging_right_2()" class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+        <!--色板3-->
+        <div class="seban" id="seban_3">
+            <!--用ng-repeat来生成重复的元素-->
+            <div ng-repeat="color in colorList[3]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(3,$index)"></div>
+            <img onclick="paging_left_3()" class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
+            <img onclick="paging_right_3()" class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+        <!--色板4-->
+        <div class="seban" id="seban_4">
+            <!--用ng-repeat来生成重复的元素-->
+            <div ng-repeat="color in colorList[4]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(4,$index)"></div>
+            <img onclick="paging_left_4()" class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
+            <img onclick="paging_right_4()" class="seban_right" src="img/colorclass/seban_right.png" alt=""/>
+        </div>
+        <!--色板5-->
+        <div class="seban" id="seban_5">
+            <!--用ng-repeat来生成重复的元素-->
+            <div ng-repeat="color in colorList[5]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(5,$index)"></div>
+            <img onclick="paging_left_5()" class="seban_left" src="img/colorclass/seban_left.png" alt=""/>
         </div>
     </ion-content>
 </ion-view>

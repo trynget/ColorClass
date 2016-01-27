@@ -75,15 +75,6 @@ function complete_off(){
     document.getElementById("complete_text").style.display = "none";
     document.getElementById("delete_complete").style.display = "none";
 }
-//调色板弹出与隐藏
-function tiao_seban(){
-    var ts_click = document.getElementById("seban_1");
-    if(ts_click.style.display =="none"){
-        ts_click.style.display = "block";
-    }else{
-        ts_click.style.display = "none";
-    }
-}
 //参考图片按钮
 function photoanniu_on(){
     document.getElementById("photo_1").style.display = "block";
@@ -93,8 +84,44 @@ function photoanniu_off(){
     document.getElementById("photo_1").style.display = "none";
     document.getElementById("photo_bj").style.display = "none";
 }
+//调色板弹出与隐藏
+function tiao_seban(){
+    var ts_click = document.getElementById("seban_1");
+    if(ts_click.style.display =="none"){
+        ts_click.style.display = "block";
+    }else{
+        ts_click.style.display = "none";
+        document.getElementById("seban_2").style.display = "none";
+        document.getElementById("seban_3").style.display = "none";
+        document.getElementById("seban_4").style.display = "none";
+        document.getElementById("seban_5").style.display = "none";
+    }
+}
 //色板翻页
-
+function paging_right_1(){
+    document.getElementById("seban_2").style.display = "block";
+}
+function paging_left_2(){
+    document.getElementById("seban_2").style.display = "none";
+}
+function paging_right_2(){
+    document.getElementById("seban_3").style.display = "block";
+}
+function paging_left_3(){
+    document.getElementById("seban_3").style.display = "none";
+}
+function paging_right_3(){
+    document.getElementById("seban_4").style.display = "block";
+}
+function paging_left_4(){
+    document.getElementById("seban_4").style.display = "none";
+}
+function paging_right_4(){
+    document.getElementById("seban_5").style.display = "block";
+}
+function paging_left_5(){
+    document.getElementById("seban_5").style.display = "none";
+}
 //画廊分享按钮
 function share_on(){
     document.getElementById("save").style.display = "block";
