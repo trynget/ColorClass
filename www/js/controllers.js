@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
       $state.go('first');
     }
   })
-  .controller('firstCtrl',function($scope ,$state) {
+  .controller('firstCtrl',function($scope ,$state, $ionicHistory) {
 
         $scope.goSecond_1 = function() {
           $state.go('second_1');
@@ -17,7 +17,8 @@ angular.module('starter.controllers', [])
             $state.go('second_2');
         };
         $scope.goSecond_3 = function() {
-            $state.go('second_3');
+          $ionicHistory.clearCache();
+          $state.go('second_3');
         };
         $scope.goSecond_4 = function() {
             $state.go('second_4');
@@ -82,9 +83,12 @@ angular.module('starter.controllers', [])
         };
         $scope.drawComplete = function() {
           complete_on();
+          var svgStored = JSON.parse(localStorage.svgStored);
           var svgDom = document.getElementById("ceyan_photo").children[0].getSVGDocument();
-          $rootScope.svgStr  = $(svgDom).find('svg').html();
-          console.log($rootScope.svgStr);
+          var svgStr  = $(svgDom).find('svg').html();
+          svgStored.push(svgStr);
+          console.log(svgStored);
+          localStorage.svgStored = JSON.stringify(svgStored);
         };
 
     })
@@ -240,20 +244,25 @@ angular.module('starter.controllers', [])
         history.back();
     };
 
-    var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+$rootScope.svgStr+'</svg>';
-    $('#hualang_4').html(svgSmall);
-
-
-    $scope.goThree_galley_1 = function() {
-            $state.go('three_galley_1');
-    };
+    var svgStored = JSON.parse(localStorage.svgStored);
+    var len = svgStored.length;
+    //todo 画廊格子的显示和事件添加
+    for(var i=0;i<len;i++) {
+      var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i]+'</svg>';
+      $rootScope.svgBig = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;margin-left: 0;margin-top: 0;" xml:space="preserve">'+svgStored[i]+'</svg>';
+      $('#hualang_'+(i+1)).html(svgSmall)
+        .on('click',function(){
+          $state.go('three_galley_1');
+        });
+    }
 
 })
-    .controller('Three_galley_1Ctrl',function($scope ,$state) {
+    .controller('Three_galley_1Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_3 = function() {
             history.back();
         };
-
+        var svgDiv = $('#galley_photo');
+        $($rootScope.svgBig).appendTo(svgDiv);
     })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {

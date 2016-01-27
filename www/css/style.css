@@ -130,8 +130,8 @@ li{list-style-type: none;}
 /*=============二级页--画廊========begin========*/
 #goback_3{width:13.98%;height: auto;position: absolute;bottom: 10.62%;left: 43.52%;}
 .hualanggezi{width: 27.59%;height: 16.15%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);overflow: hidden}
-#hualang_1{position: absolute;top: 22.5%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("../img/gallery/hualang_1.png");background-size: 100% 100%;}
-#hualang_2{position: absolute;top: 22.5%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("../img/gallery/hualang_2.png");background-size: 100% 100%;}
+#hualang_1{position: absolute;top: 22.5%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
+#hualang_2{position: absolute;top: 22.5%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
 #hualang_3{position: absolute;top: 22.5%;left: 66.94%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
 #hualang_4{position: absolute;top: 40.65%;left: 4.63%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}
 #hualang_5{position: absolute;top: 40.65%;left: 35.83%;border: 0.3em solid #7CB7A5;background: url("");background-size: 100% 100%;}

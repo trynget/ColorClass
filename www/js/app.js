@@ -11,6 +11,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
       localStorage.classRank = localStorage.classRank || 1;
       localStorage.freeRank = localStorage.freeRank || 0;
       localStorage.galleryRank = localStorage.galleryRank || 0;
+      localStorage.svgStored = localStorage.svgStored || '[]';
 
       if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
