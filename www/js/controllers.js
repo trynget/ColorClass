@@ -128,9 +128,9 @@ angular.module('starter.controllers', [])
             $state.go('three_free_4');
         };
 })
-    .controller('Three_free_1Ctrl',function($scope ,$state, svgList) {
+    .controller('Three_free_1Ctrl',function($scope ,$state, svgList, $rootScope) {
         $scope.backSecond_2 = function() {
-            $state.go('second_2');
+            history.back();
         };
         var svgList = svgList.getSvgList("fashion");
         console.log(svgList);
@@ -143,15 +143,19 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goAft = function() {
-            if(i<4){
+            if(i<3){
                 $scope.svgUrl = svgList[i+1];
                 i++;
             }
+        };
+        $scope.goDraw = function(){
+            $rootScope.curSvg = $scope.svgUrl;
+            $state.go('four_free_1');
         }
     })
-    .controller('Three_free_2Ctrl',function($scope ,$state, svgList) {
+    .controller('Three_free_2Ctrl',function($scope ,$state, svgList, $rootScope) {
         $scope.backSecond_2 = function() {
-            $state.go('second_2');
+          history.back();
         };
         var svgList = svgList.getSvgList("casual");
         console.log(svgList);
@@ -164,15 +168,19 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goAft = function() {
-            if(i<4){
+            if(i<3){
                 $scope.svgUrl = svgList[i+1];
                 i++;
             }
+        };
+        $scope.goDraw = function(){
+          $rootScope.curSvg = $scope.svgUrl;
+          $state.go('four_free_1');
         }
     })
-    .controller('Three_free_3Ctrl',function($scope ,$state, svgList) {
+    .controller('Three_free_3Ctrl',function($scope ,$state, svgList, $rootScope) {
         $scope.backSecond_2 = function() {
-            $state.go('second_2');
+          history.back();
         };
         var svgList = svgList.getSvgList("dress");
         console.log(svgList);
@@ -185,15 +193,19 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goAft = function() {
-            if(i<5){
+            if(i<4){
                 $scope.svgUrl = svgList[i+1];
                 i++;
             }
+        };
+        $scope.goDraw = function(){
+          $rootScope.curSvg = $scope.svgUrl;
+          $state.go('four_free_1');
         }
     })
-    .controller('Three_free_4Ctrl',function($scope ,$state, svgList) {
+    .controller('Three_free_4Ctrl',function($scope ,$state, svgList, $rootScope) {
         $scope.backSecond_2 = function() {
-            $state.go('second_2');
+          history.back();
         };
         var svgList = svgList.getSvgList("children");
         console.log(svgList);
@@ -206,10 +218,14 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goAft = function() {
-            if(i<4){
+            if(i<3){
                 $scope.svgUrl = svgList[i+1];
                 i++;
             }
+        };
+        $scope.goDraw = function(){
+          $rootScope.curSvg = $scope.svgUrl;
+          $state.go('four_free_1');
         }
     })
 .controller('Second_3Ctrl',function($scope ,$state) {
