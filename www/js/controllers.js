@@ -23,14 +23,10 @@ angular.module('starter.controllers', [])
             $state.go('second_4');
         }
   })
-    //.controller('firstCtrl',function($scope ,$state) {
-    //    $scope.goBackStart = function() {
-    //        $state.go('start');
-    //    }
-    //})
+
 .controller('Second_1Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
-        $state.go('first');
+        history.back();
     };
         $scope.goThree_secai_1 = function() {
             $state.go('three_secai_1');
@@ -45,19 +41,20 @@ angular.module('starter.controllers', [])
             $state.go('three_secai_4');
         };
 })
-    .controller('Three_secai_1Ctrl',function($scope ,$state) {
+    .controller('Three_secai_1Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_1 = function() {
-            $state.go('second_1');
+            history.back();
         };
         $scope.goFour_secai_1 = function() {
-            $state.go('four_secai_1');
+          $rootScope.curSvg = "img/svg/1_5.svg";
+          $state.go('four_secai_1');
         }
     })
-    .controller('Four_secai_1Ctrl',function($scope ,$state) {
-        $scope.backThree_secai_1 = function() {
-            $state.go('three_secai_1');
+    .controller('Four_secai_1Ctrl',function($scope ,$state, $rootScope) {
+        $scope.backThree = function() {
+            history.back();
         };
-        var svgUrl = "img/svg/1_1.svg";
+        var svgUrl = $rootScope.curSvg;
         $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
         $scope.colorList = [
           //第一组色值
@@ -84,45 +81,36 @@ angular.module('starter.controllers', [])
           }
         };
     })
-    .controller('Three_secai_2Ctrl',function($scope ,$state) {
+    .controller('Three_secai_2Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_1 = function() {
-            $state.go('second_1');
+            history.back();
         };
         $scope.goFour_secai_2 = function() {
-            $state.go('four_secai_2');
+          $rootScope.curSvg = "img/svg/2_5.svg";
+          $state.go('four_secai_2');
         }
     })
-    .controller('Four_secai_2Ctrl',function($scope ,$state) {
-        $scope.backThree_secai_2 = function() {
-            $state.go('three_secai_2');
-        };
-    })
-    .controller('Three_secai_3Ctrl',function($scope ,$state) {
+
+    .controller('Three_secai_3Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_1 = function() {
-            $state.go('second_1');
+          history.back();
         };
         $scope.goFour_secai_3 = function() {
-            $state.go('four_secai_3');
+          $rootScope.curSvg = "img/svg/3_6.svg";
+          $state.go('four_secai_3');
         }
     })
-    .controller('Four_secai_3Ctrl',function($scope ,$state) {
-        $scope.backThree_secai_3 = function() {
-            $state.go('three_secai_3');
-        };
-    })
-    .controller('Three_secai_4Ctrl',function($scope ,$state) {
+
+    .controller('Three_secai_4Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_1 = function() {
-            $state.go('second_1');
+          history.back();
         };
         $scope.goFour_secai_4 = function() {
-            $state.go('four_secai_4');
+          $rootScope.curSvg = "img/svg/4_5.svg";
+          $state.go('four_secai_4');
         }
     })
-    .controller('Four_secai_4Ctrl',function($scope ,$state) {
-        $scope.backThree_secai_4 = function() {
-            $state.go('three_secai_4');
-        };
-    })
+
 .controller('Second_2Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');

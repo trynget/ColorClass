@@ -65,7 +65,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         .state('four_secai_2',{
             url: '/four_secai_2',
             templateUrl: 'templates/four_secai_2.html',
-            controller: "Four_secai_2Ctrl"
+            controller: "Four_secai_1Ctrl"
         })
         .state('three_secai_3',{
             url: '/three_secai_3',
@@ -75,7 +75,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         .state('four_secai_3',{
             url: '/four_secai_3',
             templateUrl: 'templates/four_secai_3.html',
-            controller: "Four_secai_3Ctrl"
+            controller: "Four_secai_1Ctrl"
         })
         .state('three_secai_4',{
             url: '/three_secai_4',
@@ -85,7 +85,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         .state('four_secai_4',{
             url: '/four_secai_4',
             templateUrl: 'templates/four_secai_4.html',
-            controller: "Four_secai_4Ctrl"
+            controller: "Four_secai_1Ctrl"
         })
         .state('second_2',{
             url: '/second_2',
