@@ -95,3 +95,13 @@ function photoanniu_off(){
 }
 //色板翻页
 
+//画廊分享按钮
+function share_on(){
+    document.getElementById("save").style.display = "block";
+    document.getElementById("save_bj").style.display = "block";
+}
+function share_off(){
+    document.getElementById("save").style.display = "none";
+    document.getElementById("save_bj").style.display = "none";
+}
+

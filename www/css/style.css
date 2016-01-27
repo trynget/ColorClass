@@ -143,12 +143,21 @@ li{list-style-type: none;}
 #next{width:22.13%;height: auto; position: absolute;right: 5.1%;;bottom: 10.84%;}
 
 /*长按删除页面*/
-#delete{width: 80.83%;height: 32.14%;background-color:#ffffff;position: absolute;top: 29.27%;left: 8.89%;border: 0.3em solid #7CB7A5;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);: 3;}
+#delete{display: none;width: 80.83%;height: 32.14%;background-color:#ffffff;position: absolute;top: 29.27%;left: 8.89%;border: 0.3em solid #7CB7A5;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);z-index: 3;}
 #text_delete{width: 39.86%;height: auto;position: absolute;top:24.07%;left:11.49%;}
 #photo_delete{width: 23.14%;height: auto;position: absolute;top:40.72%;left:17.24%;}
 #photo_delete_yes{width: 16.49%;height: auto;position: absolute;top: 19.34%;right: 15.98%;}
 #photo_delete_no{width: 16.49%;height: auto;position: absolute;bottom: 19.34%;right: 15.98%;}
 /*=============二级页--画廊========end========*/
+
+/*============三级页--画廊=============begin===========*/
+#galley_photo{width: 87.03%;height: 50.94%;position: absolute;top: 23.04%;left: 6.48%;border: 0.3em solid #7CB7A5;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
+#galley_photo img{width: 100%;height: 100%;overflow: hidden;}
+#share{width:auto;height: 8.18%;position: absolute;bottom: 11.11%;left: 30.48%;}
+#back_gallery{width:auto;height: 8.18%;position: absolute;bottom: 11.11%;right: 30.48%;}
+#save{z-index: 3;display:none;width:auto;height: 10.95%;position: absolute;bottom: 46.29%;left: 40.27%;}
+#save_bj{z-index: 2;display:none;width: 100%;height: 100%;position: absolute;top: 0;left: 0; filter:alpha(opacity=90); /*IE滤镜，透明度50%*/  -moz-opacity:0.9; /*Firefox私有，透明度50%*/  opacity:0.9;/*其他，透明度50%*/}
+/*============三级页--画廊=============end===========*/
 
 /*=============二级页--设置，制作信息========begin========*/
 #wenzishuoming{width: 50.65%;height:auto;position: absolute;top:39.02%;left: 24.63%;}

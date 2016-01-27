@@ -1,0 +1,23 @@
+<!--可以将<ion-view>标签视为<html>标签，在其中写页面-->
+<ion-view>
+    <!--bjup背景图片上半圆-->
+    <img class="bjup" src="img/bjup.png" alt=""/>
+    <!--bjdown背景图片下半边-->
+    <img class="bjdown" src="img/bjdown.png" alt=""/>
+    <ion-content scroll="false">
+        <div class="container" >
+            <!--画廊菜单图片-->
+            <img class="upmenu" src="img/gallery/hualang.png" alt=""/>
+            <!--这里用于展示画廊大图-->
+            <div id="galley_photo">
+                <img src="img/gallery/gallery_photo_1.png" alt=""/>
+                <img id="save_bj" src="img/colorclass/white_bj.png" alt=""/>
+            </div>
+            <img id="save" src="img/gallery/save.png" onclick="share_off()" alt=""/>
+        </div>
+    </ion-content>
+    <!--返回按钮-->
+    <img id="back_gallery" src="img/goback.gif" alt="" ng-click="backSecond_3()"/>
+    <!--分享按钮-->
+    <img id="share" src="img/gallery/share.png" onclick="share_on()" alt=""/>
+</ion-view>

@@ -122,6 +122,11 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
             templateUrl: 'templates/second_3.html',
             controller: "Second_3Ctrl"
         })
+        .state('three_galley_1',{
+            url: '/three_galley_1',
+            templateUrl: 'templates/three_galley_1.html',
+            controller: "Three_galley_1Ctrl"
+        })
         .state('second_4',{
             url: '/second_4',
             templateUrl: 'templates/second_4.html',

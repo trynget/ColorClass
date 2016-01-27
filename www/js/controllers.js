@@ -215,8 +215,18 @@ angular.module('starter.controllers', [])
 .controller('Second_3Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');
-    }
+    };
+        $scope.goThree_galley_1 = function() {
+            $state.go('three_galley_1');
+        };
+
 })
+    .controller('Three_galley_1Ctrl',function($scope ,$state) {
+        $scope.backSecond_3 = function() {
+            history.back();
+        };
+
+    })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
         $state.go('first');
