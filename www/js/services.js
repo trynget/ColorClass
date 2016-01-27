@@ -94,7 +94,4 @@ function photoanniu_off(){
     document.getElementById("photo_bj").style.display = "none";
 }
 //色板翻页
-function seban_fy(){
-    var Now =  document.getElementsByTagName("div");
-    window.alert(Now);
-}
+
