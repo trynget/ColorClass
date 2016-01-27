@@ -80,6 +80,13 @@ angular.module('starter.controllers', [])
             };
           }
         };
+        $scope.drawComplete = function() {
+          complete_on();
+          var svgDom = document.getElementById("ceyan_photo").children[0].getSVGDocument();
+          $rootScope.svgStr  = $(svgDom).find('svg').html();
+          console.log($rootScope.svgStr);
+        };
+
     })
     .controller('Three_secai_2Ctrl',function($scope ,$state, $rootScope) {
         $scope.backSecond_1 = function() {
@@ -228,13 +235,18 @@ angular.module('starter.controllers', [])
           $state.go('four_free_1');
         }
     })
-.controller('Second_3Ctrl',function($scope ,$state) {
+.controller('Second_3Ctrl',function($scope ,$state, $rootScope) {
     $scope.backFirst = function() {
-        $state.go('first');
+        history.back();
     };
-        $scope.goThree_galley_1 = function() {
+
+    var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+$rootScope.svgStr+'</svg>';
+    $('#hualang_4').html(svgSmall);
+
+
+    $scope.goThree_galley_1 = function() {
             $state.go('three_galley_1');
-        };
+    };
 
 })
     .controller('Three_galley_1Ctrl',function($scope ,$state) {
@@ -245,7 +257,7 @@ angular.module('starter.controllers', [])
     })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
-        $state.go('first');
+      history.back();
     }
 });
 
