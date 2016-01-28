@@ -107,7 +107,7 @@ li{list-style-type: none;}
 #shuoming_bj{display: none;z-index: 6;width:100%;height: 100%;position: absolute;top: 0;left: 0;filter:alpha(opacity=80); /*IE滤镜，透明度50%*/  -moz-opacity:0.8; /*Firefox私有，透明度50%*/  opacity:0.8;/*其他，透明度50%*/}
 #delete_shuoming{z-index: 8;display: none;width: 18%;height: 14%;position: absolute;bottom: 23.45%;right: 2.55%;}
 #shuoming_text{z-index: 7;display:none;width: 90.74%;height: auto;position: absolute;bottom: 13.55%;left: 3.88%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
-.complete{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
+#complete{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 40.74%;}
 #complete_text{z-index: 7;display:none;width: 92.13%;height: auto;position: absolute;top: 29.27%;left: 3.7%;box-shadow: 0.4em 0.4em 0 0 rgba(0, 0, 0, 0.1);}
 #delete_complete{z-index: 8;display: none;width: 20%;height: 15%;position: absolute;top: 25.26%;right: 1.16%;}
 #photo_back{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}
