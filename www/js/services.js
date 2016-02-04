@@ -77,6 +77,7 @@ function complete_on(){
 function complete_off(){
     document.getElementById("complete_text").style.display = "none";
     document.getElementById("delete_complete").style.display = "none";
+    document.getElementById("shuoming_bj").style.display = "none";
 }
 //参考图片按钮
 function photoanniu_on(){

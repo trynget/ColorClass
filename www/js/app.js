@@ -40,13 +40,14 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
       .state('first',{
         url: '/first',
         templateUrl: 'templates/first.html',
-        controller: "firstCtrl"
-
+        controller: "firstCtrl",
+        cache: false
       })
       .state('second_1',{
            url: '/second_1',
            templateUrl: 'templates/second_1.html',
-           controller: "Second_1Ctrl"
+           controller: "Second_1Ctrl",
+           cache: false
       })
         .state('three_secai_1',{
             url: '/three_secai_1',
@@ -91,7 +92,8 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         .state('second_2',{
             url: '/second_2',
             templateUrl: 'templates/second_2.html',
-            controller: "Second_2Ctrl"
+            controller: "Second_2Ctrl",
+            cache: false
         })
         .state('three_free_1',{
             url: '/three_free_1',
@@ -121,7 +123,8 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         .state('second_3',{
             url: '/second_3',
             templateUrl: 'templates/second_3.html',
-            controller: "Second_3Ctrl"
+            controller: "Second_3Ctrl",
+            cache: false
         })
         .state('three_galley_1',{
             url: '/three_galley_1',

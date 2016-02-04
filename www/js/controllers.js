@@ -52,12 +52,16 @@ angular.module('starter.controllers', [])
         };
         $scope.goFour_secai_1 = function() {
           $rootScope.curSvg = "img/svg/1_5.svg";
+          $rootScope.curRank = 1;
           $state.go('four_secai_1');
         }
     })
     .controller('Four_secai_1Ctrl',function($scope ,$state, $rootScope, $ionicHistory) {
         $scope.backThree = function() {
             history.back();
+        };
+        $scope.tiao_seban = function() {
+            tiao_seban();
         };
         var svgUrl = $rootScope.curSvg;
         $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
@@ -86,13 +90,21 @@ angular.module('starter.controllers', [])
           }
         };
         $scope.drawComplete = function() {
-          complete_on();
-          var svgStored = JSON.parse(localStorage.svgStored);
-          var svgDom = document.getElementById("ceyan_photo").children[0].getSVGDocument();
-          var svgStr  = $(svgDom).find('svg').html();
-          svgStored.push(svgStr);
-          console.log(svgStored);
-          localStorage.svgStored = JSON.stringify(svgStored);
+            complete_on();
+            $('#photo_bj').show();
+            $('#shuoming_bj').show();
+            var svgItem = {};
+            var svgStored = JSON.parse(localStorage.svgStored);
+            var svgDom = document.getElementById("ceyan_photo").children[0].getSVGDocument();
+            svgItem.svgStr  = $(svgDom).find('svg').html();
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;
+            var day = now.getDay();
+            svgItem.svgTime = year + '-' + month + '-' + day;
+            svgStored.push(svgItem);
+            console.log(svgStored);
+            localStorage.svgStored = JSON.stringify(svgStored);
         };
         $scope.drawComplete_off = function() {
             complete_off();
@@ -102,8 +114,10 @@ angular.module('starter.controllers', [])
             if(galleryRank==0) {
                 localStorage.galleryRank = galleryRank + 1;
             }
-            localStorage.classRank = classRank + 1;
-            localStorage.freeRank = freeRank + 1;
+            if(classRank == $rootScope.curRank){
+                localStorage.classRank = classRank + 1;
+                localStorage.freeRank = freeRank + 1;
+            }
             $ionicHistory.clearCache();
             $state.go('first');
         }
@@ -115,6 +129,7 @@ angular.module('starter.controllers', [])
         };
         $scope.goFour_secai_2 = function() {
           $rootScope.curSvg = "img/svg/2_5.svg";
+          $rootScope.curRank = 2;
           $state.go('four_secai_2');
         }
     })
@@ -124,7 +139,8 @@ angular.module('starter.controllers', [])
           history.back();
         };
         $scope.goFour_secai_3 = function() {
-          $rootScope.curSvg = "img/svg/3_6.svg";
+            $rootScope.curRank = 3;
+            $rootScope.curSvg = "img/svg/3_6.svg";
           $state.go('four_secai_3');
         }
     })
@@ -135,6 +151,7 @@ angular.module('starter.controllers', [])
         };
         $scope.goFour_secai_4 = function() {
           $rootScope.curSvg = "img/svg/4_5.svg";
+            $rootScope.curRank = 4;
           $state.go('four_secai_4');
         }
     })
@@ -261,18 +278,48 @@ angular.module('starter.controllers', [])
     $scope.backFirst = function() {
         history.back();
     };
-
     var svgStored = JSON.parse(localStorage.svgStored);
     var len = svgStored.length;
-    //todo 画廊格子的显示和事件添加
-    for(var i=0;i<len;i++) {
-      var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i]+'</svg>';
-      $rootScope.svgBig = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;margin-left: 0;margin-top: 0;" xml:space="preserve">'+svgStored[i]+'</svg>';
-      $('#hualang_'+(i+1)).html(svgSmall)
-        .on('click',function(){
-          $state.go('three_galley_1');
-        });
+    var pages = Math.ceil(len/9);
+    var curPage = 1;
+
+    for(var i=0;i<9;i++) {
+      if(svgStored[i]){
+        var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i].svgStr+'</svg>';
+        $('#hualang_'+(i+1)).html(svgSmall);
+      }
     }
+    $scope.goPrePage = function() {
+        if(curPage>1){
+            curPage--;
+            for(var i=0;i<9;i++) {
+                if(svgStored[i+9*(curPage-1)]){
+                    var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i+9*(curPage-1)].svgStr+'</svg>';
+                    $('#hualang_'+(i+1)).html(svgSmall);
+                }
+            }
+        }
+    };
+    $scope.goAftPage = function() {
+        if(curPage<pages){
+            curPage++;
+            for(var i=0;i<9;i++) {
+                if(svgStored[i+9*(curPage-1)]){
+                    var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i+9*(curPage-1)].svgStr+'</svg>';
+                    $('#hualang_'+(i+1)).html(svgSmall);
+                }else{
+                    $('#hualang_'+(i+1)).html('');
+                }
+            }
+        }
+    };
+    $scope.goGallery = function(n) {
+        if(svgStored[n+9*(curPage-1)]){
+            $rootScope.svgBig = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;margin-left: 0;margin-top: 0;" xml:space="preserve">'+svgStored[n+9*(curPage-1)].svgStr+'</svg>';
+            $rootScope.svgTime = svgStored[n+9*(curPage-1)].svgTime;
+            $state.go('three_galley_1');
+        }
+    };
 
 })
     .controller('Three_galley_1Ctrl',function($scope ,$state, $rootScope) {
@@ -281,6 +328,7 @@ angular.module('starter.controllers', [])
         };
         var svgDiv = $('#galley_photo');
         $($rootScope.svgBig).appendTo(svgDiv);
+        $('#date').html($rootScope.svgTime);
     })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {

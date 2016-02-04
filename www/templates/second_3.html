@@ -9,15 +9,15 @@
             <!--画廊菜单图片-->
             <img class="upmenu" src="img/gallery/hualang.png" alt=""/>
             <!--画廊内容-->
-            <div class="hualanggezi" id="hualang_1"></div>
-            <div class="hualanggezi" id="hualang_2"></div>
-            <div class="hualanggezi" id="hualang_3"></div>
-            <div class="hualanggezi" id="hualang_4"></div>
-            <div class="hualanggezi" id="hualang_5"></div>
-            <div class="hualanggezi" id="hualang_6"></div>
-            <div class="hualanggezi" id="hualang_7"></div>
-            <div class="hualanggezi" id="hualang_8"></div>
-            <div class="hualanggezi" id="hualang_9"></div>
+            <div class="hualanggezi" id="hualang_1" ng-click="goGallery(0)"></div>
+            <div class="hualanggezi" id="hualang_2" ng-click="goGallery(1)"></div>
+            <div class="hualanggezi" id="hualang_3" ng-click="goGallery(2)"></div>
+            <div class="hualanggezi" id="hualang_4" ng-click="goGallery(3)"></div>
+            <div class="hualanggezi" id="hualang_5" ng-click="goGallery(4)"></div>
+            <div class="hualanggezi" id="hualang_6" ng-click="goGallery(5)"></div>
+            <div class="hualanggezi" id="hualang_7" ng-click="goGallery(6)"></div>
+            <div class="hualanggezi" id="hualang_8" ng-click="goGallery(7)"></div>
+            <div class="hualanggezi" id="hualang_9" ng-click="goGallery(8)"></div>
             <!--长按删除界面-->
             <div id="delete">
                 <img id="photo_delete" src="img/gallery/photo_delete.png" alt=""/>
@@ -26,8 +26,8 @@
                 <img id="photo_delete_no" src="img/gallery/photo_delete_no.png" alt=""/>
             </div>
             <!--翻页按钮-->
-            <img id="last" src="img/gallery/last.png" alt=""/>
-            <img id="next" src="img/gallery/next.png" alt=""/>
+            <img id="last" ng-click="goPrePage()" src="img/gallery/last.png" alt=""/>
+            <img id="next" ng-click="goAftPage()" src="img/gallery/next.png" alt=""/>
         </div>
     </ion-content>
     <!--返回按钮-->
