@@ -54,6 +54,17 @@ angular.module('starter.services', [])
         }
     });
 
+//阻止事件传递
+function stopEventBubble(event){
+  var e = event || window.event;
+
+  if (e && e.stopPropagation){
+    e.stopPropagation();
+  }
+  else{
+    e.cancelBubble=true;
+  }
+}
 //解锁状态
 //主菜单
 
@@ -77,7 +88,10 @@ function complete_on(){
 function complete_off(){
     document.getElementById("complete_text").style.display = "none";
     document.getElementById("delete_complete").style.display = "none";
-    document.getElementById("shuoming_bj").style.display = "none";
+    setTimeout(function(){
+      document.getElementById("shuoming_bj").style.display = "none";
+    },100);
+
 }
 //参考图片按钮
 function photoanniu_on(){

@@ -299,6 +299,7 @@ angular.module('starter.controllers', [])
                 }
             }
         }
+        pages = Math.ceil(len/9);
     };
     $scope.goAftPage = function() {
         if(curPage<pages){
@@ -322,17 +323,28 @@ angular.module('starter.controllers', [])
         }
     };
 
+    //用来标示当前要删除的图片
     var deleteItem;
+    //用来标示当前已经删除的图片数
+    //var deletedNum = 0;
     $scope.showDelete = function (n) {
         $('#delete').show();
         deleteItem = n;
     };
     $scope.deleteYes = function() {
-        if(svgStored[deleteItem+9*(curPage-1)]) {
-            svgStored.splice(deleteItem+9*(curPage-1),1);
-            $('#hualang_'+(deleteItem+1)).html('');
+        var numToDelete = deleteItem+9*(curPage-1);
+        if(svgStored[numToDelete]) {
+            svgStored.splice(numToDelete,1);
             len = svgStored.length;
             localStorage.svgStored = JSON.stringify(svgStored);
+            for(var i=0;i<9;i++) {
+              if(svgStored[i+9*(curPage-1)]){
+                var svgSmall = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 300%;height: 300%;margin-left: -90%;margin-top: -20%;" xml:space="preserve">'+svgStored[i+9*(curPage-1)].svgStr+'</svg>';
+                $('#hualang_'+(i+1)).html(svgSmall);
+              }else{
+                $('#hualang_'+(i+1)).html('');
+              }
+            }
             $('#delete').hide();
         }
     };
