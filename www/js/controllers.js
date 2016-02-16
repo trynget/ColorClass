@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 //在这下面添加页面对应的控制器，每个控制器管理对应页面的功能，跳转等等
   .controller('startCtrl', function($scope, $state, showMsgService) {
     //localStorage为全局变量，在任意js中直接调用，例如此处直接输出localStorage.galleryRank的值
-    showMsgService.showMsg(localStorage.galleryRank);
+    //showMsgService.showMsg(localStorage.galleryRank);
 
     $scope.goFirst = function() {
       $state.go('first');
@@ -100,7 +100,7 @@ angular.module('starter.controllers', [])
             var now = new Date();
             var year = now.getFullYear();
             var month = now.getMonth() + 1;
-            var day = now.getDay();
+            var day = now.getDate();
             svgItem.svgTime = year + '-' + month + '-' + day;
             svgStored.push(svgItem);
             console.log(svgStored);
@@ -312,6 +312,7 @@ angular.module('starter.controllers', [])
                 }
             }
         }
+        pages = Math.ceil(len/9);
     };
     $scope.goGallery = function(n) {
         if(svgStored[n+9*(curPage-1)]){
@@ -320,6 +321,24 @@ angular.module('starter.controllers', [])
             $state.go('three_galley_1');
         }
     };
+
+    var deleteItem;
+    $scope.showDelete = function (n) {
+        $('#delete').show();
+        deleteItem = n;
+    };
+    $scope.deleteYes = function() {
+        if(svgStored[deleteItem+9*(curPage-1)]) {
+            svgStored.splice(deleteItem+9*(curPage-1),1);
+            $('#hualang_'+(deleteItem+1)).html('');
+            len = svgStored.length;
+            localStorage.svgStored = JSON.stringify(svgStored);
+            $('#delete').hide();
+        }
+    };
+    $scope.deleteNo = function() {
+        $('#delete').hide();
+    }
 
 })
     .controller('Three_galley_1Ctrl',function($scope ,$state, $rootScope) {
