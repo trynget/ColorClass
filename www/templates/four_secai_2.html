@@ -4,6 +4,8 @@
         <!--用ng-repeat来生成重复的元素-->
         <div ng-repeat="color in colorList[0]" id="sebiao_{{$index+1}}" class="sebiao" ng-click="getColor(0,$index)"></div>
         <img id="tiaoseban" src="img/colorclass/tiaoseban.png" onclick="tiao_seban()" alt=""/>
+        <!--放大缩小按钮-->
+        <button id="zoomButton" class="button icon ion-search" ng-click="zoomImage()"></button>
         <hr id="up_hr"/>
         <hr id="down_hr"/>
         <!--参考图片-->
@@ -31,7 +33,7 @@
         <img id="photo_back" src="img/colorclass/photo_back.png" ng-click="backThree()" alt=""/>
         <!--色板-->
         <!--色板1-->
-        <div class="seban" id="seban_1">
+        <div class="seban" id="seban_1" style="display: none">
             <!--用ng-repeat来生成重复的元素-->
             <div ng-repeat="color in colorList[1]" style="background-color:{{color}};border: 1px solid #AAAAAA" class="ts" ng-click="getColor(1,$index)"></div>
             <img onclick="paging_right_1()" class="seban_right" src="img/colorclass/seban_right.png" alt=""/>

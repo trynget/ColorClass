@@ -6,6 +6,8 @@
         <!--用ng-repeat来生成重复的元素-->
         <div ng-repeat="color in colorList[0]" id="sebiao_{{$index+1}}" class="sebiao" ng-click="getColor(0,$index)"></div>
         <img id="tiaoseban" src="img/colorclass/tiaoseban.png" ng-click="tiao_seban()" alt=""/>
+        <!--放大缩小按钮-->
+        <button id="zoomButton" class="button icon ion-search" ng-click="zoomImage()"></button>
         <hr id="up_hr"/>
         <hr id="down_hr"/>
         <!--引入填图图片,填色的svg图片会加载在下面这个div中-->

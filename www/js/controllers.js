@@ -65,6 +65,24 @@ angular.module('starter.controllers', [])
         };
         var svgUrl = $rootScope.curSvg;
         $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
+
+        var isZoomed = 0;
+        $scope.zoomImage = function() {
+          if(isZoomed == 0){
+            $('embed').css({
+               "transform" : "scale(2)",
+               "margin-top" : "55%"
+             });
+            isZoomed = 1;
+          }else {
+            $('embed').css({
+              "transform" : "scale(1)",
+              "margin-top" : 0
+            });
+            isZoomed = 0;
+          }
+        };
+
         $scope.colorList = [
           //第一组色值
           ["#2B2B2B","#BEDBBC","#C0D7DD","#D6C1DE","#C4CFAA","#B6BCC4","#D7D9D8"],
