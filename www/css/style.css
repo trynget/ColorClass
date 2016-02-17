@@ -128,6 +128,9 @@ li{list-style-type: none;}
 #photo_back{z-index:1;width: 20.37%;height: auto;position: absolute;bottom:2.98%;left: 71.30%}
 .seban{z-index:3;display:none;width: 37.96%;height: 73.71%;position: absolute;top: 12.47%;right: 5.09%;background-color: #ffffff;border: 0.3em solid #BFBFBF;}
 .ts{width:21.75%;height:6.03%;border-radius: 0.5em;background-color: #007aff;float: left;margin-left: 8.5%;margin-top: 9.48%;}
+.ts_select{
+  border: 3px solid #AAAAAA;
+}
 .seban_right{width: 16.5%;height: auto;position: absolute;bottom: 5%;right: 10%;}
 .seban_left{width: 16.5%;height: auto;position: absolute;bottom: 5%;left: 10%;}
 /*================四级页面-色彩课堂-第一章================end===========*/
