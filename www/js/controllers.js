@@ -99,8 +99,14 @@ angular.module('starter.controllers', [])
         ];
         $scope.getColor = function(n,index){
           var color = $scope.colorList[n][index];
+          var selectColor = $('#seban_'+n).find('div').eq(index);
           var paths = document.getElementById("ceyan_photo").children[0].getSVGDocument().getElementsByTagName("path");
           var len = paths.length;
+          for(var m = 1;m <= 5;m++) {
+            $('#seban_'+m).find('div').css('border','1px solid #AAAAAA');
+          }
+          console.log(selectColor);
+          selectColor.css('border','3px solid #AAAAAA');
           for(var i = 0;i < len;i++){
             paths[i].onclick = function(){
               this.style.fill = color;
