@@ -341,7 +341,8 @@ angular.module('starter.controllers', [])
     };
     $scope.goGallery = function(n) {
         if(svgStored[n+9*(curPage-1)]){
-            $rootScope.svgBig = '<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;margin-left: 0;margin-top: 0;" xml:space="preserve">'+svgStored[n+9*(curPage-1)].svgStr+'</svg>';
+            //$rootScope.svgBig = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;margin-left: 0;margin-top: 0;" xml:space="preserve">'+svgStored[n+9*(curPage-1)].svgStr+'</svg>';
+            $rootScope.svgBig = svgStored[n+9*(curPage-1)].svgStr;
             $rootScope.svgTime = svgStored[n+9*(curPage-1)].svgTime;
             $state.go('three_galley_1');
         }
@@ -382,8 +383,20 @@ angular.module('starter.controllers', [])
             history.back();
         };
         var svgDiv = $('#galley_photo');
-        $($rootScope.svgBig).appendTo(svgDiv);
+        //$($rootScope.svgBig).appendTo(svgDiv);
         $('#date').html($rootScope.svgTime);
+
+        var canvas = document.createElement('canvas');  //准备空画布
+        canvas.width = svgDiv.width();
+        canvas.height = svgDiv.height();
+        canvas.id = "myCanvas";
+        var element = document.getElementById("galley_photo");
+        element.appendChild(canvas);
+
+        /*使用canvg.js把svg转换成canvas显示
+        函数调用格式canvg(document.getElementById('yourCanvas'),'<svg>......</svg>')*/
+        canvg(document.getElementById('myCanvas'),'<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;" xml:space="preserve">'+$rootScope.svgBig+'</svg>');
+
     })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
