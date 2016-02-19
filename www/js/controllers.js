@@ -378,7 +378,7 @@ angular.module('starter.controllers', [])
     }
 
 })
-    .controller('Three_galley_1Ctrl',function($scope ,$state, $rootScope) {
+    .controller('Three_galley_1Ctrl',function($scope ,$state, $rootScope, showMsgService) {
         $scope.backSecond_3 = function() {
             history.back();
         };
@@ -397,6 +397,20 @@ angular.module('starter.controllers', [])
         函数调用格式canvg(document.getElementById('yourCanvas'),'<svg>......</svg>')*/
         canvg(document.getElementById('myCanvas'),'<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;width: 100%;height: 100%;" xml:space="preserve">'+$rootScope.svgBig+'</svg>');
 
+        $scope.share_off = function() {
+          //使用cordova插件canvas2ImagePlugin把canvas转为图片保存在手机相册中
+          window.canvas2ImagePlugin.saveImageDataToLibrary(
+            function(msg){
+              console.log(msg);
+            },
+            function(err){
+              console.log(err);
+            },
+            document.getElementById('myCanvas')
+          );
+          showMsgService.showMsg("图片已保存到手机相册");
+          share_off();
+        }
     })
 .controller('Second_4Ctrl',function($scope ,$state) {
     $scope.backFirst = function() {
