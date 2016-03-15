@@ -45,9 +45,9 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
       })
       .state('second_1',{
            url: '/second_1',
+            cache:'false',
            templateUrl: 'templates/second_1.html',
-           controller: "Second_1Ctrl",
-           cache: false
+           controller: "Second_1Ctrl"
       })
         .state('three_secai_1',{
             url: '/three_secai_1',
@@ -61,6 +61,7 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         })
         .state('three_secai_2',{
             url: '/three_secai_2',
+            cache:'false',
             templateUrl: 'templates/three_secai_2.html',
             controller: "Three_secai_2Ctrl"
         })
