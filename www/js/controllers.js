@@ -51,7 +51,8 @@ angular.module('starter.controllers', [])
             history.back();
         };
         $scope.goFour_secai_1 = function() {
-          $rootScope.curSvg = "img/svg/1_5.svg";
+          //$rootScope.curSvg = "img/svg/1_5.svg";
+          curSvg = "img/svg/1_5.svg";
           $rootScope.curRank = 1;
           $state.go('four_secai_1');
         }
@@ -63,8 +64,8 @@ angular.module('starter.controllers', [])
         $scope.tiao_seban = function() {
             tiao_seban();
         };
-        var svgUrl = $rootScope.curSvg;
-        $("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
+        //var svgUrl = $rootScope.curSvg;
+        //$("#ceyan_photo").html('<embed src="'+svgUrl+'" width="100%" height="100%" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />');
 
         var isZoomed = 0;
         $scope.zoomImage = function() {
@@ -152,7 +153,8 @@ angular.module('starter.controllers', [])
             history.back();
         };
         $scope.goFour_secai_2 = function() {
-          $rootScope.curSvg = "img/svg/2_5.svg";
+          //$rootScope.curSvg = "img/svg/2_5.svg";
+          curSvg = "img/svg/2_5.svg";
           $rootScope.curRank = 2;
           $state.go('four_secai_2');
         }
@@ -164,7 +166,8 @@ angular.module('starter.controllers', [])
         };
         $scope.goFour_secai_3 = function() {
             $rootScope.curRank = 3;
-            $rootScope.curSvg = "img/svg/3_6.svg";
+            //$rootScope.curSvg = "img/svg/3_6.svg";
+          curSvg = "img/svg/3_6.svg";
           $state.go('four_secai_3');
         }
     })
@@ -174,7 +177,8 @@ angular.module('starter.controllers', [])
           history.back();
         };
         $scope.goFour_secai_4 = function() {
-          $rootScope.curSvg = "img/svg/4_5.svg";
+          //$rootScope.curSvg = "img/svg/4_5.svg";
+          curSvg = "img/svg/4_5.svg";
             $rootScope.curRank = 4;
           $state.go('four_secai_4');
         }
@@ -219,7 +223,8 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goDraw = function(){
-            $rootScope.curSvg = $scope.svgUrl;
+            //$rootScope.curSvg = $scope.svgUrl;
+          curSvg = $scope.svgUrl;
             $state.go('four_free_1');
         }
     })
@@ -244,7 +249,8 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goDraw = function(){
-          $rootScope.curSvg = $scope.svgUrl;
+          //$rootScope.curSvg = $scope.svgUrl;
+          curSvg = $scope.svgUrl;
           $state.go('four_free_1');
         }
     })
@@ -269,7 +275,8 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goDraw = function(){
-          $rootScope.curSvg = $scope.svgUrl;
+          //$rootScope.curSvg = $scope.svgUrl;
+          curSvg = $scope.svgUrl;
           $state.go('four_free_1');
         }
     })
@@ -294,7 +301,8 @@ angular.module('starter.controllers', [])
             }
         };
         $scope.goDraw = function(){
-          $rootScope.curSvg = $scope.svgUrl;
+          //$rootScope.curSvg = $scope.svgUrl;
+          curSvg = $scope.svgUrl;
           $state.go('four_free_1');
         }
     })
