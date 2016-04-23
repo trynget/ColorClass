@@ -32,18 +32,18 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
   .config(function($stateProvider, $urlRouterProvider){
     //一个页面为一个状态，在下面配置其路径，控制器等，添加了首页和第一个跳转页的示例
     $stateProvider
-      .state('start', {
+        .state('start', {
         url: '/start',
         templateUrl: 'templates/start.html',
         controller: "startCtrl"
       })
-      .state('first',{
+        .state('first',{
         url: '/first',
         templateUrl: 'templates/first.html',
         controller: "firstCtrl",
         cache: false
       })
-      .state('second_1',{
+        .state('second_1',{
            url: '/second_1',
             cache:'false',
            templateUrl: 'templates/second_1.html',
@@ -51,11 +51,13 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
       })
         .state('three_secai_1',{
             url: '/three_secai_1',
+            cache:'false',
             templateUrl: 'templates/three_secai_1.html',
             controller: "Three_secai_1Ctrl"
         })
         .state('four_secai_1',{
             url: '/four_secai_1',
+            cache:'false',
             templateUrl: 'templates/four_secai_1.html',
             controller: "Four_secai_1Ctrl"
         })
@@ -67,26 +69,31 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         })
         .state('four_secai_2',{
             url: '/four_secai_2',
+            cache:'false',
             templateUrl: 'templates/four_secai_2.html',
             controller: "Four_secai_1Ctrl"
         })
         .state('three_secai_3',{
             url: '/three_secai_3',
+            cache:'false',
             templateUrl: 'templates/three_secai_3.html',
             controller: "Three_secai_3Ctrl"
         })
         .state('four_secai_3',{
             url: '/four_secai_3',
+            cache:'false',
             templateUrl: 'templates/four_secai_3.html',
             controller: "Four_secai_1Ctrl"
         })
         .state('three_secai_4',{
             url: '/three_secai_4',
+            cache:'false',
             templateUrl: 'templates/three_secai_4.html',
             controller: "Three_secai_4Ctrl"
         })
         .state('four_secai_4',{
             url: '/four_secai_4',
+            cache:'false',
             templateUrl: 'templates/four_secai_4.html',
             controller: "Four_secai_1Ctrl"
         })
@@ -98,28 +105,33 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         })
         .state('three_free_1',{
             url: '/three_free_1',
+            cache:'false',
             templateUrl: 'templates/three_free_1.html',
             controller: "Three_free_1Ctrl"
         })
-        .state('four_free_1',{
-            url: '/four_free_1',
-            templateUrl: 'templates/four_free_1.html',
-            controller: "Four_secai_1Ctrl"
-        })
         .state('three_free_2',{
             url: '/three_free_2',
+            cache:'false',
             templateUrl: 'templates/three_free_2.html',
             controller: "Three_free_2Ctrl"
         })
         .state('three_free_3',{
             url: '/three_free_3',
+            cache:'false',
             templateUrl: 'templates/three_free_3.html',
             controller: "Three_free_3Ctrl"
         })
         .state('three_free_4',{
             url: '/three_free_4',
+            cache:'false',
             templateUrl: 'templates/three_free_4.html',
             controller: "Three_free_4Ctrl"
+        })
+        .state('four_free_1',{
+            url: '/four_free_1',
+            cache:'false',
+            templateUrl: 'templates/four_free_1.html',
+            controller: "Four_free_1Ctrl"
         })
         .state('second_3',{
             url: '/second_3',
