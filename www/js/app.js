@@ -105,33 +105,28 @@ angular.module('starter', ['ionic','starter.controllers','starter.services'])
         })
         .state('three_free_1',{
             url: '/three_free_1',
-            cache:'false',
             templateUrl: 'templates/three_free_1.html',
             controller: "Three_free_1Ctrl"
         })
         .state('three_free_2',{
             url: '/three_free_2',
-            cache:'false',
             templateUrl: 'templates/three_free_2.html',
             controller: "Three_free_2Ctrl"
         })
         .state('three_free_3',{
             url: '/three_free_3',
-            cache:'false',
             templateUrl: 'templates/three_free_3.html',
             controller: "Three_free_3Ctrl"
         })
         .state('three_free_4',{
             url: '/three_free_4',
-            cache:'false',
             templateUrl: 'templates/three_free_4.html',
             controller: "Three_free_4Ctrl"
         })
         .state('four_free_1',{
             url: '/four_free_1',
-            cache:'false',
             templateUrl: 'templates/four_free_1.html',
-            controller: "Four_free_1Ctrl"
+            controller: "Four_secai_1Ctrl"
         })
         .state('second_3',{
             url: '/second_3',
