@@ -17,9 +17,9 @@ li{list-style-type: none;}
 
 /*===================欢迎页开始------begin----------*/
 /*欢迎页中间图片*/
-#hellocenter{width: 65%;height: 19%;margin-top: 35.02%;margin-left: 17.5%;}
+#hellocenter{width: 65%;height: 19%;margin-top: 45.02%;margin-left: 21.5%;}
 /*欢迎页点击开始文字属性*/
-#begin{width: 100%;height: auto;color: #62A18E;font-size: 1.2em; font-weight: 700;letter-spacing: 10px; text-align: center;margin-left: auto;margin-right: auto;margin-top: 43%}
+#begin{width: 50%;height: 10%;line-height:300%;color: #62A18E;font-size: 1.2em; font-weight: 700;letter-spacing: 10px; text-align: center;margin-left: auto;margin-right: auto;margin-top: 33%}
 #begin a{text-decoration: none;color: #62A18E;}
 #begin a:link{text-decoration: none;color: #62A18E;}
 #begin a:hover{text-decoration: none;color: #FF9500;}
